@@ -1,0 +1,3464 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeArchitecturePreference = i386;
+		activeBuildConfigurationName = Debug;
+		activeExecutable = C355A0E011A72E5200616D9E /* otest */;
+		activeSDKPreference = macosx10.6;
+		activeTarget = FCAAF0740CC95C5E00C52F82 /* OAuthConsumerTestSuite */;
+		addToTargets = (
+		);
+		breakpoints = (
+			C3E4C9B311967B8900CEBAF3 /* SignedRequest.m:169 */,
+			C3E4C9CD11967C1F00CEBAF3 /* objc_exception_throw */,
+			C399B288119F8FDA00F21986 /* Call.m:35 */,
+			C349D77911A4FD3800B5AA10 /* SignedRequest.m:169 */,
+			C349D77B11A4FD3A00B5AA10 /* SignedRequest.m:169 */,
+			C355A0D711A72D8D00616D9E /* RibbitTest.m:158 */,
+			C3259CD011A74B400070CD1B /* RibbitTest.m:74 */,
+			C3259D1011A774490070CD1B /* NSMutableURLRequest+Parameters.m:87 */,
+			C3259DC811A77CBD0070CD1B /* SignedRequest.m:169 */,
+			C3259DCA11A77CBE0070CD1B /* SignedRequest.m:169 */,
+			C3259DFE11A783300070CD1B /* NSMutableURLRequest+Parameters.m:89 */,
+			C3259E2F11A787A70070CD1B /* SignedRequest.m:169 */,
+			C3259E3511A788BE0070CD1B /* SignedRequest.m:169 */,
+			C3259E4F11A796B30070CD1B /* OADataFetcher.m:47 */,
+			C3259E5111A796BC0070CD1B /* OADataFetcher.m:82 */,
+			C3259E5311A796BD0070CD1B /* OADataFetcher.m:84 */,
+			C3259F0611A7B1E50070CD1B /* SignedRequest.m:169 */,
+			C3259F0E11A7B2250070CD1B /* SignedRequest.m:169 */,
+			C3259F1011A7B2260070CD1B /* SignedRequest.m:169 */,
+			C3259F1611A7B6470070CD1B /* SignedRequest.m:269 */,
+			C3259FBB11A7C5350070CD1B /* SignedRequest.m:169 */,
+			C3259FBD11A7C5370070CD1B /* SignedRequest.m:169 */,
+			C3259FBF11A7C5390070CD1B /* SignedRequest.m:169 */,
+			C3259FC311A7C53B0070CD1B /* SignedRequest.m:169 */,
+			C3259FCE11A7C5750070CD1B /* SignedRequest.m:169 */,
+			C3259FD011A7C5750070CD1B /* SignedRequest.m:169 */,
+			C325A07C11A7D0B10070CD1B /* OAMutableURLRequest.m:193 */,
+			C325A07E11A7D0B30070CD1B /* OAMutableURLRequest.m:198 */,
+			C325A08011A7D0B60070CD1B /* OAMutableURLRequest.m:200 */,
+			C325A08211A7D0BB0070CD1B /* OAMutableURLRequest.m:218 */,
+			C325A08411A7D0BC0070CD1B /* OAMutableURLRequest.m:220 */,
+			C325A08611A7D0BD0070CD1B /* OAMutableURLRequest.m:201 */,
+			C325A08811A7D0BF0070CD1B /* OAMutableURLRequest.m:198 */,
+			C325A08F11A7D0E80070CD1B /* OAMutableURLRequest.m:207 */,
+			C325A0B211A7D1F20070CD1B /* NSMutableURLRequest+Parameters.m:60 */,
+			C325A0B411A7D1F30070CD1B /* NSMutableURLRequest+Parameters.m:61 */,
+			C325A0B611A7D1F50070CD1B /* NSMutableURLRequest+Parameters.m:63 */,
+			C325A0D411A7D3FA0070CD1B /* SignedRequest.m:169 */,
+			C325A0E511A7D44D0070CD1B /* OADataFetcher.m:38 */,
+			C325A0E711A7D44F0070CD1B /* OADataFetcher.m:77 */,
+			C325A0EF11A7D46B0070CD1B /* OADataFetcher.m:78 */,
+			C325A0F111A7D46D0070CD1B /* OADataFetcher.m:79 */,
+			C325A0F311A7D46D0070CD1B /* OADataFetcher.m:80 */,
+			C325A0F711A7D4C80070CD1B /* OADataFetcher.m:91 */,
+			C325A0F911A7D4CA0070CD1B /* OADataFetcher.m:98 */,
+			C325A2D711AB44630070CD1B /* OADataFetcher.m:52 */,
+			C325A2DB11AB44A90070CD1B /* OADataFetcher.m:58 */,
+			C325A2DF11AB44CE0070CD1B /* OAServiceTicket.m:38 */,
+			C325A2E111AB44CF0070CD1B /* OAServiceTicket.m:37 */,
+			C325A52A11AD2A060070CD1B /* RibbitTest.m:74 */,
+			C325A52C11AD2A080070CD1B /* RibbitTest.m:74 */,
+			C325A52E11AD2A0A0070CD1B /* RibbitTest.m:74 */,
+			C325A53011AD2A0C0070CD1B /* RibbitTest.m:74 */,
+			C325A53211AD2A0E0070CD1B /* RibbitTest.m:74 */,
+			C325A53411AD2A100070CD1B /* RibbitTest.m:74 */,
+			C325A66811ADEC200070CD1B /* SignedRequest.m:169 */,
+			C325A66A11ADEC250070CD1B /* SignedRequest.m:169 */,
+			C325A6C811ADF1480070CD1B /* SignedRequest.m:169 */,
+			C325A6CC11ADF16E0070CD1B /* SignedRequest.m:169 */,
+			C325A6E511ADF3600070CD1B /* SignedRequest.m:169 */,
+			C325A6E711ADF3630070CD1B /* SignedRequest.m:169 */,
+			C325A6ED11ADF3AD0070CD1B /* SignedRequest.m:169 */,
+			C325A6EF11ADF3B00070CD1B /* SignedRequest.m:169 */,
+			C325A6F111ADF3B40070CD1B /* SignedRequest.m:169 */,
+			C325A6FA11ADF3D50070CD1B /* SignedRequest.m:169 */,
+			C325A72F11ADF9630070CD1B /* OAServiceTicket.m:39 */,
+			C325A78A11AE019E0070CD1B /* RibbitTest.m:62 */,
+			C325A7DC11AE062C0070CD1B /* Call.m:128 */,
+			C325A84E11AE0BFB0070CD1B /* SignedRequest.m:545 */,
+			C325A86D11AE0D550070CD1B /* SignedRequest.m:169 */,
+			C325A87611AE0E3E0070CD1B /* SignedRequest.m:169 */,
+			C325A87811AE0E400070CD1B /* SignedRequest.m:169 */,
+			C325A88411AE0E600070CD1B /* RibbitTest.m:74 */,
+			C325A88911AE0E9F0070CD1B /* SignedRequest.m:169 */,
+			C325A89C11AE102C0070CD1B /* SignedRequest.m:163 */,
+			C325A89E11AE10440070CD1B /* SignedRequest.m:169 */,
+			C325A8A011AE10470070CD1B /* SignedRequest.m:169 */,
+			C325A8DC11AE146C0070CD1B /* SignedRequest.m:169 */,
+			C325AB1A11AE39300070CD1B /* Message.m:125 */,
+			C325AB1C11AE39320070CD1B /* Message.m:125 */,
+			C325AB1E11AE39340070CD1B /* Message.m:125 */,
+			C325AB2011AE39490070CD1B /* Message.m:125 */,
+			C3355A0B11AF18260023DEA9 /* RibbitTest.m:285 */,
+			C3355A0D11AF18290023DEA9 /* RibbitTest.m:281 */,
+			C3355A0F11AF182B0023DEA9 /* RibbitTest.m:278 */,
+			C3355A7011AF3F380023DEA9 /* RibbitTest.m:74 */,
+			C3355BCA11B0F18D0023DEA9 /* Ribbit.m:228 */,
+			C3EAA39911D02227003AA119 /* SignedRequest.m:573 */,
+			C3EAA39D11D022DE003AA119 /* SignedRequest.m:257 */,
+		);
+		codeSenseManager = C31AC6D71193AF3000833008 /* Code sense */;
+		executables = (
+			C355A0E011A72E5200616D9E /* otest */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = 1;
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_ContinueID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					264,
+					20,
+					164,
+					164,
+					94,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA23EDF0692099D00951B8B" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					479,
+					20,
+					379,
+					379,
+					309,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					1196,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = 1;
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					690,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					448,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					726,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1268,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 298838795;
+			PBXWorkspaceStateSaveDate = 298838795;
+		};
+		perUserProjectItems = {
+			C3259C2911A730840070CD1B /* PlistBookmark */ = C3259C2911A730840070CD1B /* PlistBookmark */;
+			C3259C2A11A730840070CD1B /* PlistBookmark */ = C3259C2A11A730840070CD1B /* PlistBookmark */;
+			C3259C9011A735B70070CD1B /* PlistBookmark */ = C3259C9011A735B70070CD1B /* PlistBookmark */;
+			C3259D1711A7745F0070CD1B /* PBXTextBookmark */ = C3259D1711A7745F0070CD1B /* PBXTextBookmark */;
+			C3259E4811A78BF00070CD1B /* PBXTextBookmark */ = C3259E4811A78BF00070CD1B /* PBXTextBookmark */;
+			C325A2B311AB429E0070CD1B /* PBXTextBookmark */ = C325A2B311AB429E0070CD1B /* PBXTextBookmark */;
+			C325A43C11AB5D610070CD1B /* PBXTextBookmark */ = C325A43C11AB5D610070CD1B /* PBXTextBookmark */;
+			C325A6D611ADF2600070CD1B /* PBXTextBookmark */ = C325A6D611ADF2600070CD1B /* PBXTextBookmark */;
+			C325A77711AE01270070CD1B /* PBXTextBookmark */ = C325A77711AE01270070CD1B /* PBXTextBookmark */;
+			C3355BB211B0F0AB0023DEA9 /* PBXTextBookmark */ = C3355BB211B0F0AB0023DEA9 /* PBXTextBookmark */;
+			C3355BB611B0F0AB0023DEA9 /* PBXTextBookmark */ = C3355BB611B0F0AB0023DEA9 /* PBXTextBookmark */;
+			C3355C7211B5A2B50023DEA9 /* PBXTextBookmark */ = C3355C7211B5A2B50023DEA9 /* PBXTextBookmark */;
+			C3355C7311B5A2B50023DEA9 /* PBXTextBookmark */ = C3355C7311B5A2B50023DEA9 /* PBXTextBookmark */;
+			C3355C7411B5A2B50023DEA9 /* PBXTextBookmark */ = C3355C7411B5A2B50023DEA9 /* PBXTextBookmark */;
+			C3355C7611B5A2B50023DEA9 /* PBXTextBookmark */ = C3355C7611B5A2B50023DEA9 /* PBXTextBookmark */;
+			C3355C9911B5A7160023DEA9 /* PBXTextBookmark */ = C3355C9911B5A7160023DEA9 /* PBXTextBookmark */;
+			C3355CAA11B5EBF60023DEA9 /* PBXTextBookmark */ = C3355CAA11B5EBF60023DEA9 /* PBXTextBookmark */;
+			C3355CD811B5F2850023DEA9 /* PBXTextBookmark */ = C3355CD811B5F2850023DEA9 /* PBXTextBookmark */;
+			C3355CD911B5F2850023DEA9 /* PBXTextBookmark */ = C3355CD911B5F2850023DEA9 /* PBXTextBookmark */;
+			C3355CDB11B5F2850023DEA9 /* PBXTextBookmark */ = C3355CDB11B5F2850023DEA9 /* PBXTextBookmark */;
+			C3355D8411B640640023DEA9 /* PBXTextBookmark */ = C3355D8411B640640023DEA9 /* PBXTextBookmark */;
+			C3355EB411B648140023DEA9 /* PlistBookmark */ = C3355EB411B648140023DEA9 /* PlistBookmark */;
+			C38DC2C311B83B2600E70976 /* PBXTextBookmark */ = C38DC2C311B83B2600E70976 /* PBXTextBookmark */;
+			C38DC2C911B83B2600E70976 /* PBXTextBookmark */ = C38DC2C911B83B2600E70976 /* PBXTextBookmark */;
+			C38DC2CE11B83B2600E70976 /* PBXTextBookmark */ = C38DC2CE11B83B2600E70976 /* PBXTextBookmark */;
+			C38DC2D011B83B2600E70976 /* PBXTextBookmark */ = C38DC2D011B83B2600E70976 /* PBXTextBookmark */;
+			C38DC32211B85CD500E70976 /* PBXTextBookmark */ = C38DC32211B85CD500E70976 /* PBXTextBookmark */;
+			C38DC32311B85CD500E70976 /* PBXTextBookmark */ = C38DC32311B85CD500E70976 /* PBXTextBookmark */;
+			C38DC51311C6D5F400E70976 /* PBXTextBookmark */ = C38DC51311C6D5F400E70976 /* PBXTextBookmark */;
+			C38DC5E311C6E53B00E70976 /* PBXTextBookmark */ = C38DC5E311C6E53B00E70976 /* PBXTextBookmark */;
+			C38DC61511C6E7F000E70976 /* PBXTextBookmark */ = C38DC61511C6E7F000E70976 /* PBXTextBookmark */;
+			C38DC64D11C6EC3D00E70976 /* PBXTextBookmark */ = C38DC64D11C6EC3D00E70976 /* PBXTextBookmark */;
+			C38DC6AA11C6F45500E70976 /* PBXTextBookmark */ = C38DC6AA11C6F45500E70976 /* PBXTextBookmark */;
+			C38DC6C811C6F99D00E70976 /* PBXTextBookmark */ = C38DC6C811C6F99D00E70976 /* PBXTextBookmark */;
+			C38DC6C911C6F99D00E70976 /* PBXTextBookmark */ = C38DC6C911C6F99D00E70976 /* PBXTextBookmark */;
+			C3EAA34711D01461003AA119 /* PBXTextBookmark */ = C3EAA34711D01461003AA119 /* PBXTextBookmark */;
+			C3EAA34A11D01461003AA119 /* PBXTextBookmark */ = C3EAA34A11D01461003AA119 /* PBXTextBookmark */;
+			C3EAA35A11D0177E003AA119 /* PBXTextBookmark */ = C3EAA35A11D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA35E11D0177E003AA119 /* PBXTextBookmark */ = C3EAA35E11D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA35F11D0177E003AA119 /* PBXTextBookmark */ = C3EAA35F11D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA36011D0177E003AA119 /* PBXTextBookmark */ = C3EAA36011D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA36111D0177E003AA119 /* PBXTextBookmark */ = C3EAA36111D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA36211D0177E003AA119 /* PBXTextBookmark */ = C3EAA36211D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA36311D0177E003AA119 /* PBXTextBookmark */ = C3EAA36311D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA36411D0177E003AA119 /* PBXTextBookmark */ = C3EAA36411D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA36511D0177E003AA119 /* PBXTextBookmark */ = C3EAA36511D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA36611D0177E003AA119 /* PBXTextBookmark */ = C3EAA36611D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA36711D0177E003AA119 /* PBXTextBookmark */ = C3EAA36711D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA36811D0177E003AA119 /* PBXTextBookmark */ = C3EAA36811D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA36911D0177E003AA119 /* PBXTextBookmark */ = C3EAA36911D0177E003AA119 /* PBXTextBookmark */;
+			C3EAA38011D01A6A003AA119 /* PBXTextBookmark */ = C3EAA38011D01A6A003AA119 /* PBXTextBookmark */;
+			C3EAA3C211D046D0003AA119 /* PBXBookmark */ = C3EAA3C211D046D0003AA119 /* PBXBookmark */;
+			C3EAA3DB11D14009003AA119 /* PBXBookmark */ = C3EAA3DB11D14009003AA119 /* PBXBookmark */;
+			C3EAA3DC11D1402B003AA119 /* PBXBookmark */ = C3EAA3DC11D1402B003AA119 /* PBXBookmark */;
+			C3EAA3E411D14321003AA119 /* PBXTextBookmark */ = C3EAA3E411D14321003AA119 /* PBXTextBookmark */;
+			C3EAA3E511D14321003AA119 /* PBXTextBookmark */ = C3EAA3E511D14321003AA119 /* PBXTextBookmark */;
+			C3EAA3E611D14321003AA119 /* PBXTextBookmark */ = C3EAA3E611D14321003AA119 /* PBXTextBookmark */;
+			C3EAA3E811D14321003AA119 /* PBXTextBookmark */ = C3EAA3E811D14321003AA119 /* PBXTextBookmark */;
+			C3EAA3E911D14321003AA119 /* PBXTextBookmark */ = C3EAA3E911D14321003AA119 /* PBXTextBookmark */;
+			C3EAA3EA11D14321003AA119 /* PBXTextBookmark */ = C3EAA3EA11D14321003AA119 /* PBXTextBookmark */;
+			C3EAA3EB11D14321003AA119 /* PBXTextBookmark */ = C3EAA3EB11D14321003AA119 /* PBXTextBookmark */;
+			C3EAA3F211D14321003AA119 /* PBXTextBookmark */ = C3EAA3F211D14321003AA119 /* PBXTextBookmark */;
+			C3EAA45211D1747E003AA119 /* PBXTextBookmark */ = C3EAA45211D1747E003AA119 /* PBXTextBookmark */;
+			C3EAA45311D1747E003AA119 /* PBXTextBookmark */ = C3EAA45311D1747E003AA119 /* PBXTextBookmark */;
+			C3EAA45411D1747E003AA119 /* PBXTextBookmark */ = C3EAA45411D1747E003AA119 /* PBXTextBookmark */;
+			C3EAA45511D1747E003AA119 /* PBXTextBookmark */ = C3EAA45511D1747E003AA119 /* PBXTextBookmark */;
+			C3EAA45611D1747E003AA119 /* PBXTextBookmark */ = C3EAA45611D1747E003AA119 /* PBXTextBookmark */;
+			C3EAA45711D1747E003AA119 /* PBXTextBookmark */ = C3EAA45711D1747E003AA119 /* PBXTextBookmark */;
+			C3EAA45A11D1747E003AA119 /* PBXTextBookmark */ = C3EAA45A11D1747E003AA119 /* PBXTextBookmark */;
+			C3EAA45F11D1747E003AA119 /* PBXTextBookmark */ = C3EAA45F11D1747E003AA119 /* PBXTextBookmark */;
+			C3EAA46A11D2BDA0003AA119 /* PBXTextBookmark */ = C3EAA46A11D2BDA0003AA119 /* PBXTextBookmark */;
+			C3EAA46B11D2BDA0003AA119 /* PBXTextBookmark */ = C3EAA46B11D2BDA0003AA119 /* PBXTextBookmark */;
+			C3EAA46D11D2BDA0003AA119 /* PBXTextBookmark */ = C3EAA46D11D2BDA0003AA119 /* PBXTextBookmark */;
+			C3EAA47611D2BDA0003AA119 /* PBXTextBookmark */ = C3EAA47611D2BDA0003AA119 /* PBXTextBookmark */;
+			C3EAA49F11D2DBAB003AA119 /* PBXTextBookmark */ = C3EAA49F11D2DBAB003AA119 /* PBXTextBookmark */;
+			C3EAA4E911D2E007003AA119 /* PBXTextBookmark */ = C3EAA4E911D2E007003AA119 /* PBXTextBookmark */;
+			C3EAA4FF11D2E1EA003AA119 /* PBXTextBookmark */ = C3EAA4FF11D2E1EA003AA119 /* PBXTextBookmark */;
+			C3EAA50011D2E1EA003AA119 /* PBXTextBookmark */ = C3EAA50011D2E1EA003AA119 /* PBXTextBookmark */;
+			C3EAA50911D2E1FF003AA119 /* PBXTextBookmark */ = C3EAA50911D2E1FF003AA119 /* PBXTextBookmark */;
+			C3EAA50B11D2E1FF003AA119 /* PBXTextBookmark */ = C3EAA50B11D2E1FF003AA119 /* PBXTextBookmark */;
+			C3EAA50C11D2E1FF003AA119 /* PBXTextBookmark */ = C3EAA50C11D2E1FF003AA119 /* PBXTextBookmark */;
+			C3EAA50D11D2E1FF003AA119 /* PBXTextBookmark */ = C3EAA50D11D2E1FF003AA119 /* PBXTextBookmark */;
+			C3EAA50E11D2E1FF003AA119 /* PBXTextBookmark */ = C3EAA50E11D2E1FF003AA119 /* PBXTextBookmark */;
+			C3EAA50F11D2E1FF003AA119 /* PBXTextBookmark */ = C3EAA50F11D2E1FF003AA119 /* PBXTextBookmark */;
+		};
+		sourceControlManager = C31AC6D61193AF3000833008 /* Source Control */;
+		userBuildSettings = {
+			OBJROOT = "$(SYMROOT)";
+		};
+	};
+	089C1667FE841158C02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {974, 669}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 99}";
+			sepNavWindowFrame = "{{15, 85}, {716, 688}}";
+		};
+	};
+	2DFA860F0EFCF7B200F849D3 /* OAAsynchronousDataFetcher.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1160, 598}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 422}";
+		};
+	};
+	2DFA86100EFCF7B200F849D3 /* OAAsynchronousDataFetcher.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1181, 1599}}";
+			sepNavSelRange = "{1994, 7}";
+			sepNavVisRange = "{1091, 372}";
+		};
+	};
+	4571A8900DAC51A900E2A30E /* OAToken_KeychainExtensions.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 742}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 583}";
+		};
+	};
+	4571A8910DAC51A900E2A30E /* OAToken_KeychainExtensions.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {868, 1287}}";
+			sepNavSelRange = "{1385, 0}";
+			sepNavVisRange = "{1199, 372}";
+		};
+	};
+	45AD605B0DB4FF7000A34D21 /* All */ = {
+		activeExec = 0;
+	};
+	8DC2EF4F0486A6940098B216 /* OAuthConsumer */ = {
+		activeExec = 0;
+	};
+	8DC2EF5A0486A6940098B216 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{0, 74}, {1280, 704}}";
+		};
+	};
+	C31AC6D61193AF3000833008 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	C31AC6D71193AF3000833008 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C3259C2911A730840070CD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = C349D5BD11A4498C00B5AA10 /* RibbitObj-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/jason.williams/src/workspace/jwill/Ribbit-ObjectiveC-SDK/RibbitObj-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	C3259C2A11A730840070CD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = C349D80011A5056200B5AA10 /* RibbitApp-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/jason.williams/src/workspace/jwill/Ribbit-ObjectiveC-SDK/RibbitApp-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	C3259C9011A735B70070CD1B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = FCAAF0760CC95C5E00C52F82 /* OAuthConsumerTestSuite-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/jason.williams/src/workspace/jwill/Ribbit-ObjectiveC-SDK/OAuthConsumerTestSuite-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	C3259CD011A74B400070CD1B /* RibbitTest.m:74 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testStartCall";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 74;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.360315;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C3259D1011A774490070CD1B /* NSMutableURLRequest+Parameters.m:87 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3CB0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m */;
+		functionName = "-setParameters:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 87;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.646912;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259D1711A7745F0070CD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3259D1811A7745F0070CD1B /* Cocoa.h */;
+		name = "Cocoa.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 485;
+		vrLoc = 0;
+	};
+	C3259D1811A7745F0070CD1B /* Cocoa.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = Cocoa.h;
+		path = /System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h;
+		sourceTree = "<absolute>";
+	};
+	C3259DC811A77CBD0070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.358606;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C3259DCA11A77CBE0070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.362206;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C3259DFE11A783300070CD1B /* NSMutableURLRequest+Parameters.m:89 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3CB0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m */;
+		functionName = "-setParameters:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 89;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.352493;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C3259E2F11A787A70070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.648128;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259E3511A788BE0070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.648487;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259E4811A78BF00070CD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FC98DF550CD19A7C00453F6C /* NSURL+Base.h */;
+		name = "NSURL+Base.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1344;
+		vrLoc = 0;
+	};
+	C3259E4F11A796B30070CD1B /* OADataFetcher.m:47 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:username:password:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 47;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.648812;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259E5111A796BC0070CD1B /* OADataFetcher.m:82 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 82;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.649131;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259E5311A796BD0070CD1B /* OADataFetcher.m:84 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 84;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.64943;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259E8F11A7A9EF0070CD1B /* RunPlatformUnitTests.include */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.script.sh;
+		name = RunPlatformUnitTests.include;
+		path = /Developer/Tools/RunPlatformUnitTests.include;
+		sourceTree = "<absolute>";
+	};
+	C3259F0611A7B1E50070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.64973;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259F0E11A7B2250070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.65008;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259F1011A7B2260070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.650454;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259F1611A7B6470070CD1B /* SignedRequest.m:269 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-requestTokenTicket:didFailWithError:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 269;
+		modificationTime = 298862264.65082;
+		originalNumberOfMultipleMatches = 0;
+		state = 2;
+	};
+	C3259FBB11A7C5350070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.651153;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259FBD11A7C5370070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.651519;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259FBF11A7C5390070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.651925;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259FC311A7C53B0070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.652297;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259FCE11A7C5750070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.652631;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3259FD011A7C5750070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.653042;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A07C11A7D0B10070CD1B /* OAMutableURLRequest.m:193 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3C60CC9F5B500C52F82 /* OAMutableURLRequest.m */;
+		functionName = "-prepareWithXAuthBodySignature:signatureMethod:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 193;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.358339;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A07E11A7D0B30070CD1B /* OAMutableURLRequest.m:198 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3C60CC9F5B500C52F82 /* OAMutableURLRequest.m */;
+		functionName = "-prepareWithXAuthBodySignature:signatureMethod:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 198;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.352253;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A08011A7D0B60070CD1B /* OAMutableURLRequest.m:200 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3C60CC9F5B500C52F82 /* OAMutableURLRequest.m */;
+		functionName = "-prepareWithXAuthBodySignature:signatureMethod:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 200;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.361197;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A08211A7D0BB0070CD1B /* OAMutableURLRequest.m:218 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3C60CC9F5B500C52F82 /* OAMutableURLRequest.m */;
+		functionName = "-prepareWithXAuthBodySignature:signatureMethod:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 218;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.357;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A08411A7D0BC0070CD1B /* OAMutableURLRequest.m:220 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3C60CC9F5B500C52F82 /* OAMutableURLRequest.m */;
+		functionName = "-prepareWithXAuthBodySignature:signatureMethod:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 220;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.363349;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A08611A7D0BD0070CD1B /* OAMutableURLRequest.m:201 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3C60CC9F5B500C52F82 /* OAMutableURLRequest.m */;
+		functionName = "-prepareWithXAuthBodySignature:signatureMethod:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 201;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.356236;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A08811A7D0BF0070CD1B /* OAMutableURLRequest.m:198 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3C60CC9F5B500C52F82 /* OAMutableURLRequest.m */;
+		functionName = "-prepareWithXAuthBodySignature:signatureMethod:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 198;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.364023;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A08F11A7D0E80070CD1B /* OAMutableURLRequest.m:207 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3C60CC9F5B500C52F82 /* OAMutableURLRequest.m */;
+		functionName = "-prepareWithXAuthBodySignature:signatureMethod:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 207;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.655723;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A0B211A7D1F20070CD1B /* NSMutableURLRequest+Parameters.m:60 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3CB0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m */;
+		functionName = "-parameters";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 60;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.656024;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A0B411A7D1F30070CD1B /* NSMutableURLRequest+Parameters.m:61 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3CB0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m */;
+		functionName = "-parameters";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 61;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.656316;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A0B611A7D1F50070CD1B /* NSMutableURLRequest+Parameters.m:63 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCAAF3CB0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m */;
+		functionName = "-parameters";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 63;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.65661;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A0D411A7D3FA0070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.359966;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A0E511A7D44D0070CD1B /* OADataFetcher.m:38 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:username:password:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 38;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.353155;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A0E711A7D44F0070CD1B /* OADataFetcher.m:77 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 77;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.363643;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A0EF11A7D46B0070CD1B /* OADataFetcher.m:78 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 78;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.658149;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A0F111A7D46D0070CD1B /* OADataFetcher.m:79 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 79;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.6587;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A0F311A7D46D0070CD1B /* OADataFetcher.m:80 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 80;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.659284;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A0F711A7D4C80070CD1B /* OADataFetcher.m:91 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 91;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.360869;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A0F911A7D4CA0070CD1B /* OADataFetcher.m:98 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 98;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.354216;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A2B311AB429E0070CD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2DFA860F0EFCF7B200F849D3 /* OAAsynchronousDataFetcher.h */;
+		name = "OAAsynchronousDataFetcher.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 422;
+		vrLoc = 0;
+	};
+	C325A2D711AB44630070CD1B /* OADataFetcher.m:52 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:username:password:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 52;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.349612;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A2DB11AB44A90070CD1B /* OADataFetcher.m:58 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		functionName = "-fetchDataWithRequest:delegate:username:password:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 58;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.661164;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A2DF11AB44CE0070CD1B /* OAServiceTicket.m:38 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CA80CDFF1A000C75049 /* OAServiceTicket.m */;
+		functionName = "-initWithRequest:response:didSucceed:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 38;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.661537;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A2E111AB44CF0070CD1B /* OAServiceTicket.m:37 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CA80CDFF1A000C75049 /* OAServiceTicket.m */;
+		functionName = "-initWithRequest:response:didSucceed:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 37;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.661887;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A42F11AB5C9E0070CD1B /* RestOathUtils.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = RestOathUtils.java;
+		path = "/Users/jason.williams/Library/Mail Downloads/RestOathUtils.java";
+		sourceTree = "<absolute>";
+	};
+	C325A43C11AB5D610070CD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C325A42F11AB5C9E0070CD1B /* RestOathUtils.java */;
+		name = "RestOathUtils.java: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2575;
+		vrLoc = 17214;
+	};
+	C325A49611AD20C90070CD1B /* b64.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 5421}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2301}";
+		};
+	};
+	C325A49711AD20C90070CD1B /* b64.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1847, 7683}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 3110}";
+			sepNavWindowFrame = "{{654, 800}, {1906, 1200}}";
+		};
+	};
+	C325A49F11AD20F90070CD1B /* JSON.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 676}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1963}";
+		};
+	};
+	C325A4A011AD20F90070CD1B /* NSObject+SBJSON.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 793}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{410, 1774}";
+		};
+	};
+	C325A4A111AD20F90070CD1B /* NSObject+SBJSON.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 728}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{203, 1878}";
+		};
+	};
+	C325A4A211AD20F90070CD1B /* NSString+SBJSON.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 653}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1797}";
+		};
+	};
+	C325A4A311AD20F90070CD1B /* NSString+SBJSON.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 767}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{333, 1675}";
+		};
+	};
+	C325A4A411AD20F90070CD1B /* SBJSON.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 1794}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{3430, 1641}";
+		};
+	};
+	C325A4A511AD20F90070CD1B /* SBJSON.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1638, 9698}}";
+			sepNavSelRange = "{6850, 0}";
+			sepNavVisRange = "{6174, 960}";
+		};
+	};
+	C325A52A11AD2A060070CD1B /* RibbitTest.m:74 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testStartCall";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 74;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.350607;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A52C11AD2A080070CD1B /* RibbitTest.m:74 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testStartCall";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 74;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.35965;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A52E11AD2A0A0070CD1B /* RibbitTest.m:74 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testStartCall";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 74;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.35484;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A53011AD2A0C0070CD1B /* RibbitTest.m:74 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testStartCall";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 74;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.354506;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A53211AD2A0E0070CD1B /* RibbitTest.m:74 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testStartCall";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 74;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.364299;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A53411AD2A100070CD1B /* RibbitTest.m:74 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testStartCall";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 74;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.358893;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A66811ADEC200070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.664349;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A66A11ADEC250070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.359246;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A6C811ADF1480070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.356623;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A6CC11ADF16E0070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.665588;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A6D611ADF2600070CD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4571A8900DAC51A900E2A30E /* OAToken_KeychainExtensions.h */;
+		name = "OAToken_KeychainExtensions.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 583;
+		vrLoc = 0;
+	};
+	C325A6E511ADF3600070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.666013;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A6E711ADF3630070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.666391;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A6ED11ADF3AD0070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.351921;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A6EF11ADF3B00070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.357598;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A6F111ADF3B40070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.35797;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A6FA11ADF3D50070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.668818;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A72F11ADF9630070CD1B /* OAServiceTicket.m:39 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FCB87CA80CDFF1A000C75049 /* OAServiceTicket.m */;
+		functionName = "-initWithRequest:response:didSucceed:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 39;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.669259;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A77711AE01270070CD1B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCB87CB00CDFF40A00C75049 /* OADataFetcher.h */;
+		name = "OADataFetcher.h: 44";
+		rLen = 0;
+		rLoc = 1776;
+		rType = 0;
+		vrLen = 1964;
+		vrLoc = 0;
+	};
+	C325A78A11AE019E0070CD1B /* RibbitTest.m:62 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testStartCall";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 62;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.362624;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A7DC11AE062C0070CD1B /* Call.m:128 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD661194C27C0038870D /* Call.m */;
+		functionName = "-startCall";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 128;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.351645;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A84E11AE0BFB0070CD1B /* SignedRequest.m:545 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-fetchDataWithRequest:delegate:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 545;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.670528;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A86D11AE0D550070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.670996;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A87611AE0E3E0070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.361791;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A87811AE0E400070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.351226;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A88411AE0E600070CD1B /* RibbitTest.m:74 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testStartCall";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 74;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.361443;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325A88911AE0E9F0070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.672817;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A89C11AE102C0070CD1B /* SignedRequest.m:163 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-httpPostWithURI:vars:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 163;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.673326;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A89E11AE10440070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.673931;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A8A011AE10470070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.674389;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325A8DC11AE146C0070CD1B /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.674849;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325AB1A11AE39300070CD1B /* Message.m:125 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3B4745C11975D020035EB8F /* Message.m */;
+		functionName = "-sendSMS";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 125;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.675343;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325AB1C11AE39320070CD1B /* Message.m:125 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3B4745C11975D020035EB8F /* Message.m */;
+		functionName = "-sendSMS";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 125;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.675883;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C325AB1E11AE39340070CD1B /* Message.m:125 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3B4745C11975D020035EB8F /* Message.m */;
+		functionName = "-sendSMS";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 125;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.352739;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C325AB2011AE39490070CD1B /* Message.m:125 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3B4745C11975D020035EB8F /* Message.m */;
+		functionName = "-sendSMS";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 125;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.67677;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3355A0B11AF18260023DEA9 /* RibbitTest.m:285 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testSendSMS";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 285;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.350165;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C3355A0D11AF18290023DEA9 /* RibbitTest.m:281 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testSendSMS";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 281;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.353459;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C3355A0F11AF182B0023DEA9 /* RibbitTest.m:278 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testSendSMS";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 278;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.35384;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C3355A7011AF3F380023DEA9 /* RibbitTest.m:74 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testStartCall";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 74;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.355832;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C3355A9911AF45400023DEA9 /* RibbitMessage.java */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.java;
+		name = RibbitMessage.java;
+		path = "/Users/jason.williams/Documents/java-sdk/src/com/ribbit/rest/RibbitMessage.java";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {3750, 11206}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{7113, 3507}";
+		};
+	};
+	C3355BB211B0F0AB0023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCAAF35F0CC9E73200C52F82 /* NSString+URLEncoding.m */;
+		name = "NSString+URLEncoding.m: 49";
+		rLen = 0;
+		rLoc = 2104;
+		rType = 0;
+		vrLen = 2123;
+		vrLoc = 0;
+	};
+	C3355BB611B0F0AB0023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C325A4A111AD20F90070CD1B /* NSObject+SBJSON.m */;
+		name = "NSObject+SBJSON.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1878;
+		vrLoc = 203;
+	};
+	C3355BCA11B0F18D0023DEA9 /* Ribbit.m:228 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD5311949FE30038870D /* Ribbit.m */;
+		functionName = "-createUser:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 228;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.357282;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C3355C7211B5A2B50023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C325A4A311AD20F90070CD1B /* NSString+SBJSON.m */;
+		name = "NSString+SBJSON.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1675;
+		vrLoc = 333;
+	};
+	C3355C7311B5A2B50023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C325A4A211AD20F90070CD1B /* NSString+SBJSON.h */;
+		name = "NSString+SBJSON.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1797;
+		vrLoc = 0;
+	};
+	C3355C7411B5A2B50023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C325A4A011AD20F90070CD1B /* NSObject+SBJSON.h */;
+		name = "NSObject+SBJSON.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1774;
+		vrLoc = 410;
+	};
+	C3355C7611B5A2B50023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C325A4A411AD20F90070CD1B /* SBJSON.h */;
+		name = "SBJSON.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1641;
+		vrLoc = 3430;
+	};
+	C3355C9911B5A7160023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FC98DF560CD19A7C00453F6C /* NSURL+Base.m */;
+		name = "NSURL+Base.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1457;
+		vrLoc = 0;
+	};
+	C3355CAA11B5EBF60023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C325A49711AD20C90070CD1B /* b64.c */;
+		name = "b64.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2324;
+		vrLoc = 0;
+	};
+	C3355CCC11B5F2270023DEA9 /* Base64Transcoder.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {998, 2964}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1282}";
+		};
+	};
+	C3355CCD11B5F2270023DEA9 /* Base64Transcoder.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 676}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1673}";
+		};
+	};
+	C3355CD811B5F2850023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C325A49611AD20C90070CD1B /* b64.h */;
+		name = "b64.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2301;
+		vrLoc = 0;
+	};
+	C3355CD911B5F2850023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C325A49F11AD20F90070CD1B /* JSON.h */;
+		name = "JSON.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1963;
+		vrLoc = 0;
+	};
+	C3355CDB11B5F2850023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3355CCD11B5F2270023DEA9 /* Base64Transcoder.h */;
+		name = "Base64Transcoder.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1673;
+		vrLoc = 0;
+	};
+	C3355D8411B640640023DEA9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3355CCC11B5F2270023DEA9 /* Base64Transcoder.c */;
+		name = "Base64Transcoder.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1282;
+		vrLoc = 0;
+	};
+	C3355EB411B648140023DEA9 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8DC2EF5A0486A6940098B216 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/jason.williams/src/workspace/jwill/Ribbit-ObjectiveC-SDK/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	C349D77911A4FD3800B5AA10 /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 1;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.350929;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C349D77B11A4FD3A00B5AA10 /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 1;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.355443;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C355A0D711A72D8D00616D9E /* RibbitTest.m:158 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		functionName = "-testLogin";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 158;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.360602;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C355A0E011A72E5200616D9E /* otest */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+			YES,
+			YES,
+		);
+		argumentStrings = (
+			"-SenTest RibbitTest/All",
+			"$(BUILT_PRODUCTS_DIR)/RibbitObjectiveCTestSuite.octest",
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+			"PBXLSLaunchAction-0" = {
+				PBXLSLaunchAction = 0;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 2;
+				PBXLSLaunchStyle = 0;
+				class = PBXLSRunLaunchConfig;
+				commandLineArgs = (
+				);
+				displayName = "Executable Runner";
+				environment = {
+				};
+				identifier = com.apple.Xcode.launch.runConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+			{
+				active = YES;
+				name = DYLD_LIBRARY_PATH;
+				value = "$(BUILT_PRODUCTS_DIR)";
+			},
+			{
+				active = YES;
+				name = DYLD_FRAMEWORK_PATH;
+				value = "$(BUILT_PRODUCTS_DIR)";
+			},
+			{
+				active = YES;
+				name = NSZombieEnabled;
+				value = YES;
+			},
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = C355A0E111A72E5200616D9E /* otest */;
+		libgmallocEnabled = 0;
+		name = otest;
+		savedGlobals = {
+		};
+		showTypeColumn = 1;
+		sourceDirectories = (
+		);
+		startupPath = "<<ProductDirectory>>";
+		variableFormatDictionary = {
+			$fctrl = 1;
+			$fioff = 1;
+			$fiseg = 1;
+			$fooff = 1;
+			$fop = 1;
+			$foseg = 1;
+			$fstat = 1;
+			$ftag = 1;
+			$mxcsr = 1;
+		};
+	};
+	C355A0E111A72E5200616D9E /* otest */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = "compiled.mach-o.executable";
+		name = otest;
+		path = /Developer/Tools/otest;
+		sourceTree = "<absolute>";
+	};
+	C35C655411A1821000A44D92 /* User.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 741}}";
+			sepNavSelRange = "{68, 0}";
+			sepNavVisRange = "{0, 1580}";
+			sepNavWindowFrame = "{{14, 800}, {1906, 1200}}";
+		};
+	};
+	C35C655511A1821000A44D92 /* User.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2098, 1508}}";
+			sepNavSelRange = "{393, 0}";
+			sepNavVisRange = "{1221, 2818}";
+			sepNavWindowFrame = "{{15, 85}, {716, 688}}";
+		};
+	};
+	C38A2FD8119A2C00000F9916 /* Service.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 718}}";
+			sepNavSelRange = "{335, 0}";
+			sepNavVisRange = "{0, 1408}";
+			sepNavWindowFrame = "{{15, 79}, {960, 699}}";
+		};
+	};
+	C38A2FD9119A2C00000F9916 /* Service.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 1144}}";
+			sepNavSelRange = "{2400, 0}";
+			sepNavVisRange = "{749, 1908}";
+			sepNavWindowFrame = "{{15, 79}, {960, 699}}";
+		};
+	};
+	C38A306F119A3FFF000F9916 /* MessageDestination.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 718}}";
+			sepNavSelRange = "{239, 0}";
+			sepNavVisRange = "{0, 446}";
+		};
+	};
+	C38A3070119A3FFF000F9916 /* MessageDestination.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 718}}";
+			sepNavSelRange = "{110, 0}";
+			sepNavVisRange = "{0, 279}";
+		};
+	};
+	C38A307D119A402A000F9916 /* Folder.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 718}}";
+			sepNavSelRange = "{319, 17}";
+			sepNavVisRange = "{0, 1115}";
+			sepNavWindowFrame = "{{15, 85}, {716, 688}}";
+		};
+	};
+	C38A307E119A402A000F9916 /* Folder.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 1300}}";
+			sepNavSelRange = "{1042, 37}";
+			sepNavVisRange = "{0, 1482}";
+			sepNavWindowFrame = "{{424, 79}, {640, 699}}";
+		};
+	};
+	C38A3084119A4032000F9916 /* FolderResource.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 718}}";
+			sepNavSelRange = "{874, 0}";
+			sepNavVisRange = "{0, 956}";
+		};
+	};
+	C38A3085119A4032000F9916 /* FolderResource.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 741}}";
+			sepNavSelRange = "{396, 0}";
+			sepNavVisRange = "{0, 1380}";
+		};
+	};
+	C38A30CC119B61D0000F9916 /* Device.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 718}}";
+			sepNavSelRange = "{236, 0}";
+			sepNavVisRange = "{0, 1512}";
+			sepNavWindowFrame = "{{15, 85}, {716, 688}}";
+		};
+	};
+	C38A30CD119B61D0000F9916 /* Device.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2098, 1651}}";
+			sepNavSelRange = "{2362, 0}";
+			sepNavVisRange = "{545, 1814}";
+			sepNavWindowFrame = "{{0, 74}, {1235, 704}}";
+		};
+	};
+	C38DC2C311B83B2600E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C325A4A511AD20F90070CD1B /* SBJSON.m */;
+		name = "SBJSON.m: 187";
+		rLen = 0;
+		rLoc = 6850;
+		rType = 0;
+		vrLen = 960;
+		vrLoc = 6174;
+	};
+	C38DC2C911B83B2600E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD6A1194C2850038870D /* CallLeg.h */;
+		name = "CallLeg.h: 18";
+		rLen = 0;
+		rLoc = 279;
+		rType = 0;
+		vrLen = 1398;
+		vrLoc = 0;
+	};
+	C38DC2CE11B83B2600E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD6B1194C2850038870D /* CallLeg.m */;
+		name = "CallLeg.m: 85";
+		rLen = 0;
+		rLoc = 3207;
+		rType = 0;
+		vrLen = 2411;
+		vrLoc = 143;
+	};
+	C38DC2D011B83B2600E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD821194C3070038870D /* Resource.m */;
+		name = "Resource.m: 16";
+		rLen = 0;
+		rLoc = 222;
+		rType = 0;
+		vrLen = 218;
+		vrLoc = 0;
+	};
+	C38DC32211B85CD500E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD581194A0460038870D /* RibbitConfig.h */;
+		name = "RibbitConfig.h: 43";
+		rLen = 0;
+		rLoc = 1123;
+		rType = 0;
+		vrLen = 1492;
+		vrLoc = 0;
+	};
+	C38DC32311B85CD500E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD591194A0460038870D /* RibbitConfig.m */;
+		name = "RibbitConfig.m: 23";
+		rLen = 0;
+		rLoc = 445;
+		rType = 0;
+		vrLen = 913;
+		vrLoc = 0;
+	};
+	C38DC36011B8A2E600E70976 /* RibbitTest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1176, 4719}}";
+			sepNavSelRange = "{10090, 0}";
+			sepNavVisRange = "{7980, 1610}";
+			sepNavWindowFrame = "{{15, 74}, {1235, 704}}";
+		};
+	};
+	C38DC36111B8A2E600E70976 /* RibbitTest.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1176, 611}}";
+			sepNavSelRange = "{327, 0}";
+			sepNavVisRange = "{0, 934}";
+			sepNavWindowFrame = "{{15, 74}, {1235, 704}}";
+		};
+	};
+	C38DC51311C6D5F400E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C1667FE841158C02AAC07 /* English */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 99;
+		vrLoc = 0;
+	};
+	C38DC5BA11C6E3A100E70976 /* TestLocationModel.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = TestLocationModel.m;
+		path = "/Users/jason.williams/src/workspace/jwill/Ribbit-ObjectiveC0.1.1/WiteBox/TestLocationModel.m";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1222, 2093}}";
+			sepNavSelRange = "{3341, 0}";
+			sepNavVisRange = "{3232, 452}";
+		};
+	};
+	C38DC5D111C6E3AC00E70976 /* WiteBoxTestDetailViewController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = WiteBoxTestDetailViewController.m;
+		path = "/Users/jason.williams/src/workspace/jwill/Ribbit-ObjectiveC0.1.1/WiteBox-iPhone/WiteBoxTestDetailViewController.m";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1384, 1417}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1861}";
+		};
+	};
+	C38DC5E311C6E53B00E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38DC5D111C6E3AC00E70976 /* WiteBoxTestDetailViewController.m */;
+		name = "WiteBoxTestDetailViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1861;
+		vrLoc = 0;
+	};
+	C38DC60911C6E68D00E70976 /* RibbitPlatformTests.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1222, 520}}";
+			sepNavSelRange = "{209, 0}";
+			sepNavVisRange = "{0, 211}";
+		};
+	};
+	C38DC61511C6E7F000E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38DC5BA11C6E3A100E70976 /* TestLocationModel.m */;
+		name = "TestLocationModel.m: 147";
+		rLen = 0;
+		rLoc = 3341;
+		rType = 0;
+		vrLen = 1276;
+		vrLoc = 2493;
+	};
+	C38DC64D11C6EC3D00E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38DC60911C6E68D00E70976 /* RibbitPlatformTests.m */;
+		name = "RibbitPlatformTests.m: 11";
+		rLen = 0;
+		rLoc = 209;
+		rType = 0;
+		vrLen = 883;
+		vrLoc = 0;
+	};
+	C38DC6AA11C6F45500E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCAAF3CA0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.h */;
+		name = "NSMutableURLRequest+Parameters.h: 30";
+		rLen = 19;
+		rLoc = 1331;
+		rType = 0;
+		vrLen = 1451;
+		vrLoc = 0;
+	};
+	C38DC6C811C6F99D00E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCAAF3CB0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m */;
+		name = "NSMutableURLRequest+Parameters.m: 49";
+		rLen = 0;
+		rLoc = 2009;
+		rType = 0;
+		vrLen = 2059;
+		vrLoc = 599;
+	};
+	C38DC6C911C6F99D00E70976 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3259E8F11A7A9EF0070CD1B /* RunPlatformUnitTests.include */;
+		name = "RunPlatformUnitTests.include: 451";
+		rLen = 135;
+		rLoc = 16022;
+		rType = 0;
+		vrLen = 1817;
+		vrLoc = 14833;
+	};
+	C399B288119F8FDA00F21986 /* Call.m:35 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+			C399B298119F900A00F21986 /* XCBreakpointCommandAction */,
+		);
+		breakpointStyle = 0;
+		comments = "Print self and auto-continue";
+		continueAfterActions = 1;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD661194C27C0038870D /* Call.m */;
+		functionName = "-initWithConfig:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 35;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862362.355178;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	C399B298119F900A00F21986 /* XCBreakpointCommandAction */ = {
+		isa = XCBreakpointCommandAction;
+		command = "po self";
+		fallbackIsa = XCBreakpointAction;
+		logCommand = 0;
+		useDebuggerSideImplementation = 1;
+	};
+	C3B4745B11975D020035EB8F /* Message.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 897}}";
+			sepNavSelRange = "{442, 0}";
+			sepNavVisRange = "{38, 1080}";
+			sepNavWindowFrame = "{{14, 800}, {1906, 1200}}";
+		};
+	};
+	C3B4745C11975D020035EB8F /* Message.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1153, 1612}}";
+			sepNavSelRange = "{3460, 0}";
+			sepNavVisRange = "{2455, 1153}";
+			sepNavWindowFrame = "{{15, 79}, {960, 699}}";
+		};
+	};
+	C3D5DD5211949FE30038870D /* Ribbit.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1398, 1963}}";
+			sepNavSelRange = "{3595, 1}";
+			sepNavVisRange = "{285, 560}";
+			sepNavWindowFrame = "{{0, 79}, {640, 699}}";
+		};
+	};
+	C3D5DD5311949FE30038870D /* Ribbit.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1500, 5161}}";
+			sepNavSelRange = "{1928, 0}";
+			sepNavVisRange = "{675, 1797}";
+			sepNavWindowFrame = "{{-189, 74}, {1559, 704}}";
+		};
+	};
+	C3D5DD581194A0460038870D /* RibbitConfig.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1638, 858}}";
+			sepNavSelRange = "{1119, 0}";
+			sepNavVisRange = "{0, 1492}";
+			sepNavWindowFrame = "{{15, 79}, {960, 699}}";
+		};
+	};
+	C3D5DD591194A0460038870D /* RibbitConfig.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1638, 664}}";
+			sepNavSelRange = "{441, 0}";
+			sepNavVisRange = "{0, 913}";
+			sepNavWindowFrame = "{{15, 1296}, {1545, 699}}";
+		};
+	};
+	C3D5DD601194B86D0038870D /* SignedRequest.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {985, 1248}}";
+			sepNavSelRange = "{1519, 0}";
+			sepNavVisRange = "{1088, 1282}";
+			sepNavWindowFrame = "{{267, 79}, {960, 699}}";
+		};
+	};
+	C3D5DD611194B86D0038870D /* SignedRequest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1837, 7553}}";
+			sepNavSelRange = "{4800, 0}";
+			sepNavVisRange = "{4290, 396}";
+			sepNavWindowFrame = "{{2, 801}, {1912, 1195}}";
+		};
+	};
+	C3D5DD651194C27C0038870D /* Call.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 1170}}";
+			sepNavSelRange = "{2119, 114}";
+			sepNavVisRange = "{413, 1926}";
+			sepNavWindowFrame = "{{15, 74}, {960, 704}}";
+		};
+	};
+	C3D5DD661194C27C0038870D /* Call.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1221, 3237}}";
+			sepNavSelRange = "{3440, 0}";
+			sepNavVisRange = "{2771, 1336}";
+			sepNavWindowFrame = "{{345, 58}, {1280, 699}}";
+		};
+	};
+	C3D5DD6A1194C2850038870D /* CallLeg.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1638, 835}}";
+			sepNavSelRange = "{275, 0}";
+			sepNavVisRange = "{0, 1398}";
+		};
+	};
+	C3D5DD6B1194C2850038870D /* CallLeg.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2098, 1287}}";
+			sepNavSelRange = "{3203, 0}";
+			sepNavVisRange = "{143, 2411}";
+			sepNavWindowFrame = "{{15, 79}, {960, 699}}";
+		};
+	};
+	C3D5DD811194C3070038870D /* Resource.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 670}}";
+			sepNavSelRange = "{267, 0}";
+			sepNavVisRange = "{0, 328}";
+			sepNavWindowFrame = "{{15, 79}, {960, 699}}";
+		};
+	};
+	C3D5DD821194C3070038870D /* Resource.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1638, 835}}";
+			sepNavSelRange = "{218, 0}";
+			sepNavVisRange = "{0, 218}";
+		};
+	};
+	C3E4C9B311967B8900CEBAF3 /* SignedRequest.m:169 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-sendRequestWithURI:method:vars:username:pass:outStream:acceptType:contentType:inStream:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 169;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.644615;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3E4C9CD11967C1F00CEBAF3 /* objc_exception_throw */ = {
+		isa = PBXSymbolicBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 1;
+		continueAfterActions = 1;
+		countType = 0;
+		delayBeforeContinue = 0;
+		hitCount = 0;
+		ignoreCount = 0;
+		location = libobjc.A.dylib;
+		modificationTime = 298862264.684255;
+		originalNumberOfMultipleMatches = 0;
+		state = 2;
+		symbolName = objc_exception_throw;
+	};
+	C3EAA34711D01461003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD651194C27C0038870D /* Call.h */;
+		name = "Call.h: 79";
+		rLen = 114;
+		rLoc = 2119;
+		rType = 0;
+		vrLen = 1926;
+		vrLoc = 413;
+	};
+	C3EAA34A11D01461003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3355A9911AF45400023DEA9 /* RibbitMessage.java */;
+		name = "RibbitMessage.java: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 3507;
+		vrLoc = 7113;
+	};
+	C3EAA35A11D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3B4745B11975D020035EB8F /* Message.h */;
+		name = "Message.h: 22";
+		rLen = 0;
+		rLoc = 442;
+		rType = 0;
+		vrLen = 1080;
+		vrLoc = 38;
+	};
+	C3EAA35E11D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38A2FD8119A2C00000F9916 /* Service.h */;
+		name = "Service.h: 18";
+		rLen = 0;
+		rLoc = 335;
+		rType = 0;
+		vrLen = 1408;
+		vrLoc = 0;
+	};
+	C3EAA35F11D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38A2FD9119A2C00000F9916 /* Service.m */;
+		name = "Service.m: 77";
+		rLen = 0;
+		rLoc = 2400;
+		rType = 0;
+		vrLen = 1908;
+		vrLoc = 749;
+	};
+	C3EAA36011D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38A30CC119B61D0000F9916 /* Device.h */;
+		name = "Device.h: 14";
+		rLen = 0;
+		rLoc = 236;
+		rType = 0;
+		vrLen = 1512;
+		vrLoc = 0;
+	};
+	C3EAA36111D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38A30CD119B61D0000F9916 /* Device.m */;
+		name = "Device.m: 70";
+		rLen = 15;
+		rLoc = 2462;
+		rType = 0;
+		vrLen = 2635;
+		vrLoc = 1885;
+	};
+	C3EAA36211D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C35C655411A1821000A44D92 /* User.h */;
+		name = "User.h: 5";
+		rLen = 0;
+		rLoc = 68;
+		rType = 0;
+		vrLen = 1580;
+		vrLoc = 0;
+	};
+	C3EAA36311D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C35C655511A1821000A44D92 /* User.m */;
+		name = "User.m: 19";
+		rLen = 0;
+		rLoc = 393;
+		rType = 0;
+		vrLen = 2818;
+		vrLoc = 1221;
+	};
+	C3EAA36411D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38A306F119A3FFF000F9916 /* MessageDestination.h */;
+		name = "MessageDestination.h: 13";
+		rLen = 0;
+		rLoc = 239;
+		rType = 0;
+		vrLen = 446;
+		vrLoc = 0;
+	};
+	C3EAA36511D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38A3070119A3FFF000F9916 /* MessageDestination.m */;
+		name = "MessageDestination.m: 6";
+		rLen = 0;
+		rLoc = 110;
+		rType = 0;
+		vrLen = 279;
+		vrLoc = 0;
+	};
+	C3EAA36611D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38A3084119A4032000F9916 /* FolderResource.h */;
+		name = "FolderResource.h: 31";
+		rLen = 0;
+		rLoc = 874;
+		rType = 0;
+		vrLen = 956;
+		vrLoc = 0;
+	};
+	C3EAA36711D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38A3085119A4032000F9916 /* FolderResource.m */;
+		name = "FolderResource.m: 22";
+		rLen = 0;
+		rLoc = 396;
+		rType = 0;
+		vrLen = 1380;
+		vrLoc = 0;
+	};
+	C3EAA36811D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38A307D119A402A000F9916 /* Folder.h */;
+		name = "Folder.h: 20";
+		rLen = 17;
+		rLoc = 319;
+		rType = 0;
+		vrLen = 1115;
+		vrLoc = 0;
+	};
+	C3EAA36911D0177E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38A307E119A402A000F9916 /* Folder.m */;
+		name = "Folder.m: 43";
+		rLen = 37;
+		rLoc = 1042;
+		rType = 0;
+		vrLen = 1482;
+		vrLoc = 0;
+	};
+	C3EAA38011D01A6A003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD811194C3070038870D /* Resource.h */;
+		name = "Resource.h: 16";
+		rLen = 0;
+		rLoc = 267;
+		rType = 0;
+		vrLen = 328;
+		vrLoc = 0;
+	};
+	C3EAA39911D02227003AA119 /* SignedRequest.m:573 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-getDataWithRequest:delegate:didFinishSelector:didFailSelector:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 573;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.679247;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3EAA39D11D022DE003AA119 /* SignedRequest.m:257 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		functionName = "-requestTokenTicket:didFinishWithData:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 257;
+		location = OAuthConsumerTestSuite;
+		modificationTime = 298862264.679764;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	C3EAA3C211D046D0003AA119 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C38DC36111B8A2E600E70976 /* RibbitTest.h */;
+	};
+	C3EAA3DB11D14009003AA119 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C3D5DD5311949FE30038870D /* Ribbit.m */;
+	};
+	C3EAA3DC11D1402B003AA119 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = C3D5DD661194C27C0038870D /* Call.m */;
+	};
+	C3EAA3E411D14321003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCB87CA70CDFF1A000C75049 /* OAServiceTicket.h */;
+		name = "OAServiceTicket.h: 34";
+		rLen = 13;
+		rLoc = 1388;
+		rType = 0;
+		vrLen = 1118;
+		vrLoc = 683;
+	};
+	C3EAA3E511D14321003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCB87CA80CDFF1A000C75049 /* OAServiceTicket.m */;
+		name = "OAServiceTicket.m: 33";
+		rLen = 257;
+		rLoc = 1339;
+		rType = 0;
+		vrLen = 469;
+		vrLoc = 1213;
+	};
+	C3EAA3E611D14321003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCAAF3590CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.h */;
+		name = "OAHMAC_SHA1SignatureProvider.h: 32";
+		rLen = 0;
+		rLoc = 1465;
+		rType = 0;
+		vrLen = 1383;
+		vrLoc = 155;
+	};
+	C3EAA3E811D14321003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FC98DE010CD1659000453F6C /* OAPlaintextSignatureProvider.h */;
+		name = "OAPlaintextSignatureProvider.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1314;
+		vrLoc = 0;
+	};
+	C3EAA3E911D14321003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FC98DE020CD1659000453F6C /* OAPlaintextSignatureProvider.m */;
+		name = "OAPlaintextSignatureProvider.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 827;
+		vrLoc = 697;
+	};
+	C3EAA3EA11D14321003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCAAF3BB0CC9F06C00C52F82 /* OARequestParameter.h */;
+		name = "OARequestParameter.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1009;
+		vrLoc = 743;
+	};
+	C3EAA3EB11D14321003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCAAF3BC0CC9F06C00C52F82 /* OARequestParameter.m */;
+		name = "OARequestParameter.m: 8";
+		rLen = 7;
+		rLoc = 173;
+		rType = 0;
+		vrLen = 1284;
+		vrLoc = 46;
+	};
+	C3EAA3F211D14321003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD5211949FE30038870D /* Ribbit.h */;
+		name = "Ribbit.h: 149";
+		rLen = 1;
+		rLoc = 3595;
+		rType = 0;
+		vrLen = 560;
+		vrLoc = 285;
+	};
+	C3EAA45211D1747E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCAAF35A0CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.m */;
+		name = "OAHMAC_SHA1SignatureProvider.m: 70";
+		rLen = 0;
+		rLoc = 2706;
+		rType = 0;
+		vrLen = 217;
+		vrLoc = 2584;
+	};
+	C3EAA45311D1747E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4571A8910DAC51A900E2A30E /* OAToken_KeychainExtensions.m */;
+		name = "OAToken_KeychainExtensions.m: 48";
+		rLen = 0;
+		rLoc = 1385;
+		rType = 0;
+		vrLen = 372;
+		vrLoc = 1199;
+	};
+	C3EAA45411D1747E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2DFA86100EFCF7B200F849D3 /* OAAsynchronousDataFetcher.m */;
+		name = "OAAsynchronousDataFetcher.m: 50";
+		rLen = 7;
+		rLoc = 1994;
+		rType = 0;
+		vrLen = 372;
+		vrLoc = 1091;
+	};
+	C3EAA45511D1747E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCAAF3C50CC9F5B500C52F82 /* OAMutableURLRequest.h */;
+		name = "OAMutableURLRequest.h: 68";
+		rLen = 7;
+		rLoc = 2501;
+		rType = 0;
+		vrLen = 415;
+		vrLoc = 2349;
+	};
+	C3EAA45611D1747E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCAAF3C60CC9F5B500C52F82 /* OAMutableURLRequest.m */;
+		name = "OAMutableURLRequest.m: 223";
+		rLen = 7;
+		rLoc = 8009;
+		rType = 0;
+		vrLen = 297;
+		vrLoc = 7927;
+	};
+	C3EAA45711D1747E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */;
+		name = "OADataFetcher.m: 82";
+		rLen = 7;
+		rLoc = 3306;
+		rType = 0;
+		vrLen = 811;
+		vrLoc = 2830;
+	};
+	C3EAA45A11D1747E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38DC36111B8A2E600E70976 /* RibbitTest.h */;
+		name = "RibbitTest.h: 16";
+		rLen = 0;
+		rLoc = 327;
+		rType = 0;
+		vrLen = 430;
+		vrLoc = 0;
+	};
+	C3EAA45F11D1747E003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3B4745C11975D020035EB8F /* Message.m */;
+		name = "Message.m: 125";
+		rLen = 0;
+		rLoc = 3550;
+		rType = 0;
+		vrLen = 1594;
+		vrLoc = 258;
+	};
+	C3EAA46A11D2BDA0003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3B4745C11975D020035EB8F /* Message.m */;
+		name = "Message.m: 125";
+		rLen = 0;
+		rLoc = 3596;
+		rType = 0;
+		vrLen = 567;
+		vrLoc = 3038;
+	};
+	C3EAA46B11D2BDA0003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD5311949FE30038870D /* Ribbit.m */;
+		name = "Ribbit.m: 233";
+		rLen = 0;
+		rLoc = 7212;
+		rType = 0;
+		vrLen = 696;
+		vrLoc = 5756;
+	};
+	C3EAA46D11D2BDA0003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD661194C27C0038870D /* Call.m */;
+		name = "Call.m: 145";
+		rLen = 0;
+		rLoc = 4085;
+		rType = 0;
+		vrLen = 997;
+		vrLoc = 3708;
+	};
+	C3EAA47611D2BDA0003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		name = "RibbitTest.m: 284";
+		rLen = 0;
+		rLoc = 10090;
+		rType = 0;
+		vrLen = 1523;
+		vrLoc = 9278;
+	};
+	C3EAA49F11D2DBAB003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		name = "RibbitTest.m: 280";
+		rLen = 0;
+		rLoc = 9941;
+		rType = 0;
+		vrLen = 824;
+		vrLoc = 9544;
+	};
+	C3EAA4E911D2E007003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD611194B86D0038870D /* SignedRequest.m */;
+		name = "SignedRequest.m: 83";
+		rLen = 0;
+		rLoc = 2327;
+		rType = 0;
+		vrLen = 756;
+		vrLoc = 1617;
+	};
+	C3EAA4FF11D2E1EA003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD601194B86D0038870D /* SignedRequest.h */;
+		name = "SignedRequest.h: 58";
+		rLen = 0;
+		rLoc = 1519;
+		rType = 0;
+		vrLen = 1282;
+		vrLoc = 1088;
+	};
+	C3EAA50011D2E1EA003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3EAA50111D2E1EA003AA119 /* Call.m */;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+		rType = 0;
+	};
+	C3EAA50111D2E1EA003AA119 /* Call.m */ = {
+		isa = PBXFileReference;
+		name = Call.m;
+		path = "/Users/jason.williams/src/workspace/jwill/Ribbit-ObjectiveC-SDK/Call.m";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2098, 3978}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{3421, 1329}";
+		};
+	};
+	C3EAA50911D2E1FF003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3EAA50A11D2E1FF003AA119 /* Call.m */;
+		name = "Call.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1329;
+		vrLoc = 3421;
+	};
+	C3EAA50A11D2E1FF003AA119 /* Call.m */ = {
+		isa = PBXFileReference;
+		name = Call.m;
+		path = "/Users/jason.williams/src/workspace/jwill/Ribbit-ObjectiveC-SDK/Call.m";
+		sourceTree = "<absolute>";
+	};
+	C3EAA50B11D2E1FF003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3B4745C11975D020035EB8F /* Message.m */;
+		name = "Message.m: 121";
+		rLen = 0;
+		rLoc = 3460;
+		rType = 0;
+		vrLen = 1153;
+		vrLoc = 2455;
+	};
+	C3EAA50C11D2E1FF003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD5311949FE30038870D /* Ribbit.m */;
+		name = "Ribbit.m: 70";
+		rLen = 0;
+		rLoc = 1928;
+		rType = 0;
+		vrLen = 1797;
+		vrLoc = 675;
+	};
+	C3EAA50D11D2E1FF003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3D5DD661194C27C0038870D /* Call.m */;
+		name = "Call.m: 127";
+		rLen = 0;
+		rLoc = 3440;
+		rType = 0;
+		vrLen = 1336;
+		vrLoc = 2771;
+	};
+	C3EAA50E11D2E1FF003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38DC36111B8A2E600E70976 /* RibbitTest.h */;
+		name = "RibbitTest.h: 16";
+		rLen = 0;
+		rLoc = 327;
+		rType = 0;
+		vrLen = 934;
+		vrLoc = 0;
+	};
+	C3EAA50F11D2E1FF003AA119 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C38DC36011B8A2E600E70976 /* RibbitTest.m */;
+		name = "RibbitTest.m: 284";
+		rLen = 0;
+		rLoc = 10090;
+		rType = 0;
+		vrLen = 1610;
+		vrLoc = 7980;
+	};
+	FC53ABB20CD99348001B1B99 /* OAuthConsumer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {928, 520}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1680}";
+		};
+	};
+	FC98DE010CD1659000453F6C /* OAPlaintextSignatureProvider.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {868, 416}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1314}";
+		};
+	};
+	FC98DE020CD1659000453F6C /* OAPlaintextSignatureProvider.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {868, 572}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{697, 827}";
+		};
+	};
+	FC98DF550CD19A7C00453F6C /* NSURL+Base.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 694}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1344}";
+		};
+	};
+	FC98DF560CD19A7C00453F6C /* NSURL+Base.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 676}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1457}";
+		};
+	};
+	FCAAF0740CC95C5E00C52F82 /* OAuthConsumerTestSuite */ = {
+		activeExec = 0;
+	};
+	FCAAF07E0CC95E6A00C52F82 /* OAToken.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {928, 546}}";
+			sepNavSelRange = "{1409, 0}";
+			sepNavVisRange = "{137, 1588}";
+		};
+	};
+	FCAAF07F0CC95E6A00C52F82 /* OAToken.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1069, 1378}}";
+			sepNavSelRange = "{2253, 0}";
+			sepNavVisRange = "{0, 1317}";
+		};
+	};
+	FCAAF2120CC9846D00C52F82 /* OAConsumer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {928, 533}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{1209, 278}";
+		};
+	};
+	FCAAF2130CC9846D00C52F82 /* OAConsumer.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {928, 676}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{1253, 264}";
+		};
+	};
+	FCAAF3590CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {868, 455}}";
+			sepNavSelRange = "{1465, 0}";
+			sepNavVisRange = "{155, 1383}";
+			sepNavWindowFrame = "{{15, 75}, {960, 703}}";
+		};
+	};
+	FCAAF35A0CC9E32E00C52F82 /* OAHMAC_SHA1SignatureProvider.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1326}}";
+			sepNavSelRange = "{2706, 0}";
+			sepNavVisRange = "{2584, 217}";
+			sepNavWindowFrame = "{{320, 79}, {960, 699}}";
+		};
+	};
+	FCAAF35F0CC9E73200C52F82 /* NSString+URLEncoding.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 689}}";
+			sepNavSelRange = "{2104, 0}";
+			sepNavVisRange = "{0, 2123}";
+		};
+	};
+	FCAAF3BB0CC9F06C00C52F82 /* OARequestParameter.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {868, 611}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{743, 1009}";
+			sepNavWindowFrame = "{{1, 74}, {1274, 704}}";
+		};
+	};
+	FCAAF3BC0CC9F06C00C52F82 /* OARequestParameter.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {868, 949}}";
+			sepNavSelRange = "{173, 7}";
+			sepNavVisRange = "{46, 1284}";
+			sepNavWindowFrame = "{{15, 936}, {1274, 1059}}";
+		};
+	};
+	FCAAF3C50CC9F5B500C52F82 /* OAMutableURLRequest.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {868, 1001}}";
+			sepNavSelRange = "{2501, 7}";
+			sepNavVisRange = "{2349, 415}";
+			sepNavWindowFrame = "{{0, 74}, {1280, 699}}";
+		};
+	};
+	FCAAF3C60CC9F5B500C52F82 /* OAMutableURLRequest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2021, 5733}}";
+			sepNavSelRange = "{10908, 0}";
+			sepNavVisRange = "{0, 2731}";
+			sepNavWindowFrame = "{{7, 796}, {1838, 1200}}";
+		};
+	};
+	FCAAF3CA0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {974, 639}}";
+			sepNavSelRange = "{1331, 19}";
+			sepNavVisRange = "{0, 1451}";
+		};
+	};
+	FCAAF3CB0CCA69D600C52F82 /* NSMutableURLRequest+Parameters.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1356, 1209}}";
+			sepNavSelRange = "{2009, 0}";
+			sepNavVisRange = "{1625, 731}";
+		};
+	};
+	FCB87CA70CDFF1A000C75049 /* OAServiceTicket.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 572}}";
+			sepNavSelRange = "{1388, 13}";
+			sepNavVisRange = "{683, 1118}";
+		};
+	};
+	FCB87CA80CDFF1A000C75049 /* OAServiceTicket.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1486, 676}}";
+			sepNavSelRange = "{1339, 257}";
+			sepNavVisRange = "{1213, 469}";
+			sepNavWindowFrame = "{{15, 85}, {716, 688}}";
+		};
+	};
+	FCB87CB00CDFF40A00C75049 /* OADataFetcher.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1614, 765}}";
+			sepNavSelRange = "{1776, 0}";
+			sepNavVisRange = "{0, 1964}";
+			sepNavWindowFrame = "{{0, 79}, {1280, 699}}";
+		};
+	};
+	FCB87CB10CDFF40A00C75049 /* OADataFetcher.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {887, 1404}}";
+			sepNavSelRange = "{3306, 7}";
+			sepNavVisRange = "{2830, 811}";
+			sepNavWindowFrame = "{{416, 830}, {1417, 1044}}";
+		};
+	};
+}

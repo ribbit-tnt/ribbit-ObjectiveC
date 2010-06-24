@@ -1,0 +1,99 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeSDKPreference = macosx10.6;
+		activeTarget = FCAAF0740CC95C5E00C52F82 /* OAuthConsumerTestSuite */;
+		codeSenseManager = 4FE111A911D3532A00D2385B /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					364,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 299063078;
+			PBXWorkspaceStateSaveDate = 299063078;
+		};
+		perUserProjectItems = {
+			4FE111B211D353AA00D2385B = 4FE111B211D353AA00D2385B /* PlistBookmark */;
+			4FE111B311D353AA00D2385B = 4FE111B311D353AA00D2385B /* PlistBookmark */;
+			4FE111C411D3561500D2385B = 4FE111C411D3561500D2385B /* PlistBookmark */;
+		};
+		sourceControlManager = 4FE111A811D3532A00D2385B /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	45AD605B0DB4FF7000A34D21 /* All */ = {
+		activeExec = 0;
+	};
+	4FE111A811D3532A00D2385B /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	4FE111A911D3532A00D2385B /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	4FE111B211D353AA00D2385B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = FCAAF0760CC95C5E00C52F82 /* OAuthConsumerTestSuite-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/james.williams/Documents/repos/ribbit-objectivec/OAuthConsumerTestSuite-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	4FE111B311D353AA00D2385B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = C349D5BD11A4498C00B5AA10 /* RibbitObj-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/james.williams/Documents/repos/ribbit-objectivec/RibbitObj-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	4FE111C411D3561500D2385B /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = C349D5BD11A4498C00B5AA10 /* RibbitObj-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/james.williams/Documents/repos/ribbit-objectivec/RibbitObj-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	8DC2EF4F0486A6940098B216 /* OAuthConsumer */ = {
+		activeExec = 0;
+	};
+	FCAAF0740CC95C5E00C52F82 /* OAuthConsumerTestSuite */ = {
+		activeExec = 0;
+	};
+}
