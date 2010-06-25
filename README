@@ -1,0 +1,5 @@
+Excuse the mess…
+
+This library currently uses OAuthConsumer (http://code.google.com/p/oauthconsumer/) but it will probably be factored out.
+
+TODO: Add license terms
