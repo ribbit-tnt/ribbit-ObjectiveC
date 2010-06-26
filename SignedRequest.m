@@ -105,7 +105,6 @@
 	} else {
 		string_to_sign = [NSString stringWithFormat:@"POST&%@&%@",[SignedRequest URLEncode:url],[SignedRequest URLEncode:q]];
 	}
-	NSLog(@"here");
 	
 	string_sig = [self sign_for_oauth:[string_to_sign UTF8String]];
 	if (body != nil) {		// Has a body
@@ -136,7 +135,6 @@
 					   [SignedRequest URLEncode:[config accessToken]]];
 	}
 			 
-NSLog(@"here2");
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
 	[request setTimeoutInterval:5]; 
 	[request setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];

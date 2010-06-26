@@ -5,7 +5,7 @@
 //  Created by Ribbit Corporation on 5/12/10.
 //  Copyright 2010 Ribbit Corporation. All rights reserved.
 //
-
+#import "SBJSON.h"
 #import "Service.h"
 #import "SignedRequest.h"
 
@@ -18,11 +18,12 @@
 -(id)initWithDictionary:(NSDictionary*) dictionary ribbitConfig:(RibbitConfig*)ribbitConfig{
 	[super init];
 	self.config = ribbitConfig;
-	
+//	NSLog(@"init service");
 	serviceId = [dictionary objectForKey:@"id"];
 	serviceType = [dictionary objectForKey:@"type"];
 	voicemail = [dictionary objectForKey:@"voicemail"];
 	status = [dictionary objectForKey:@"stauts"];
+//	NSLog(@"init service2");
 	NSArray *array = [dictionary objectForKey:@"folders"];
 	folders = [[NSArray alloc] initWithArray:array];
 	
@@ -38,33 +39,35 @@
 	if (config.accountId == NULL) {
 		// raise exception here, TODO figure out exact format
 	}
-	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
-	if ([folderNames count] == 0) {
-		// TODO throw an exception here
-	}
 	
-	NSMutableDictionary *vars = [[NSDictionary alloc] init];
-	[vars setObject:folderNames forKey:@"folder"];
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+	[dict setObject:folderNames forKey:@"folders"];
 	
-	NSString *uri = [[@"services/" stringByAppendingString:[config getActiveUserId]] stringByAppendingString:serviceId];
-	[request httpPutWithURI:uri variables:vars];
+	NSString *url = [[[@"services/" stringByAppendingString:[config getActiveUserId]] stringByAppendingString:@"/"] stringByAppendingString:serviceId];
+	//[request httpPutWithURI:uri variables:vars];
 	
-	// TODO deserialize reponse
-	// set folders to deserialize result	
+	[dict setObject:@"PUT" forKey:@"method"];
+	[dict setObject:url forKey:@"url"];
+	NSError *jsonerror;
+	SBJSON *json = [SBJSON new];
+
+	NSString *body = [json stringWithObject:dict error:&jsonerror];
+	[dict setObject:body forKey:@"json"];
+	
+	
+	SignedRequest *signedRequest = [[SignedRequest alloc] initWithConfig:config];
+	[signedRequest httpRequestWithDictionary:dict];
+	
 }
 
--(void)clearServiceFolders {
-	if (config.accountId == NULL) {
-		// raise exception here, TODO figure out exact format
-	}
-	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
-	NSMutableDictionary *vars = [[NSDictionary alloc] init];
-	[vars setObject:[[NSArray alloc]init] forKey:@"folder"];
-	
-	NSString *uri = [[@"services/" stringByAppendingString:[config getActiveUserId]] stringByAppendingString:serviceId];
-	[request httpPutWithURI:uri variables:vars];
+-(void)clearServiceFolders {	
+	NSLog(@"Clearing %@", [self serviceId]);
+	NSMutableArray *array = [[NSMutableArray alloc] init];
+	[array addObject:[[NSNull alloc] init]];
+	[self setServiceFoldersWithFolders:array ];
 	
 	// TODO deserialize reponse
+	// Reload folder?
 	// set folders to deserialize result
 }
 

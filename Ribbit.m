@@ -32,6 +32,12 @@
 	NSString *response = [[NSString alloc]init];
 	
 	@try {
+		NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+		[dict setObject:username forKey:@"username"];
+		[dict setObject:password forKey:@"password"];
+		[dict setObject:@"login" forKey:@"url"];
+		
+	//	[request httpRequestWithDictionary:dict];
 		[request sendLoginRequestWithURI:@"login" username:@"test" pass:@"testtest"];
 	//	[request sendLoginRequestWithURI:@"login" username:@"test" password:@"testtest"];
 		response = request.response;
@@ -66,10 +72,11 @@
 	
 	@try {
 		NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-		//[dict setObject:@"request_token" forKey:@"url"];
-		//[request httpRequestWithDictionary:dict];
+		[dict setObject:@"request_token" forKey:@"url"];
+		[dict setObject:@"POST" forKey:@"method"];
+		[request httpRequestWithDictionary:dict];
 		
-		[request httpPostWithURI:@"request_token"];
+		//[request httpPostWithURI:@"request_token"];
 		response = request.response;
 		NSArray *components = [[response componentsSeparatedByString:@"&"] autorelease];
 		NSString *requestToken = [[[[components objectAtIndex:0] componentsSeparatedByString:@"="] objectAtIndex:1] autorelease];
@@ -240,10 +247,22 @@
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
 	NSMutableString *url = [[NSMutableString alloc] initWithString:@"users/"];
 	[url appendString:[config getActiveUserId]];	
-	[request httpGetWithURI:url];
+	
+	NSMutableDictionary *d = [[NSMutableDictionary alloc] init];
+	[d setObject:url forKey:@"url"];
+	[d setObject:@"GET" forKey:@"method"];
+	[d setObject:[SignedRequest getAcceptTypeWithURI:url] forKey:@"Accept-Type"];
+	
+	[request httpRequestWithDictionary:d];
+	//[request httpGetWithURI:url];
+
 	NSString *result = request.response;
 	
-	id tempDict = [result JSONValue];
+	SBJSON *parser = [[SBJSON alloc] init];
+	
+	//id tempDict = [result JSONValue];
+	NSDictionary *tempDict = [parser objectWithString:result error:nil];
+	
 	NSDictionary *dict = [tempDict objectForKey:@"entry"];
 	User *user;
 	if (dict != nil) {
@@ -351,8 +370,14 @@
 	[request httpGetWithURI:url];
 	NSString* result = request.response;
 	
-	id tempDict = [result JSONValue];
+	SBJSON *parser = [[SBJSON alloc] init];
+	
+	//id tempDict = [result JSONValue];
+	NSDictionary *tempDict = [parser objectWithString:result error:nil];
+	
 	NSArray *dictArray = [tempDict objectForKey:@"entry"];
+	[dictArray retain];
+	NSLog(@"get services here");
 	if (dictArray != nil) {
 		NSMutableArray *services = [[NSMutableArray alloc]init];
 		int i;
@@ -361,6 +386,7 @@
 			[services addObject:temp];
 			[temp release];
 		}
+		//NSLog(@"get services here3");
 		return services;
 	} else {
 		NSLog(@"There was an error processing the services");
@@ -428,7 +454,7 @@
 
 - (void)requestTokenTicket:(OAServiceTicket *)ticket didFinishWithData:(NSData *)data {
 	//	NSLog(@"data = %@", data);
-	NSLog(@"my Data: %.*s", [data length], [data bytes]);
+	//NSLog(@"my Data: %.*s", [data length], [data bytes]);
 	if (ticket.didSucceed) {
 		//NSLog(@"data = %@", data);
 		NSString *responseBody = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
