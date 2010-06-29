@@ -46,7 +46,7 @@
 	NSString *uri = (NSString*)[dict objectForKey:@"url"];
 	NSString *body_sig, *string_sig, *auth_header;
 	NSString *body, *string_to_sign, *q;
-	NSMutableString *method, *url;
+	NSString *method, *url;
 	
 	if ([uri hasPrefix:@"http"]) 
 		url = uri;
@@ -54,7 +54,7 @@
 		url = [[NSMutableString alloc] initWithString:[config endpoint]];
 		[url appendString:uri];
 	}
-	
+	[url retain];
 	
 	if ([dict objectForKey:@"method"] != nil) {
 		method = [dict objectForKey:@"method"];
@@ -66,7 +66,9 @@
 		body = [dict objectForKey:@"json"];
 		body_sig = [self sign_for_oauth:[body UTF8String]];
 	}
-
+	[body retain];
+	[method retain];
+	[body_sig retain];
 	////(void)NSLog(body);
 	// Create the string for the auth header signature
 	NSString *nonce = [SignedRequest generate_nonce];
@@ -93,7 +95,7 @@
 			 [dict objectForKey:@"password"],
 			 [dict objectForKey:@"username"]];	
 	}
-	
+	[q retain];
 	
 	
 	if ([method isEqualToString:@"PUT"]) {
@@ -106,6 +108,8 @@
 		string_to_sign = [NSString stringWithFormat:@"POST&%@&%@",[SignedRequest URLEncode:url],[SignedRequest URLEncode:q]];
 	}
 	
+	[string_to_sign retain];
+	[string_sig retain];
 	string_sig = [self sign_for_oauth:[string_to_sign UTF8String]];
 	if (body != nil) {		// Has a body
 		auth_header = [NSString stringWithFormat:@"OAuth realm=\"%@\",oauth_consumer_key=\"%@\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"%.0f\",oauth_nonce=\"%@\",oauth_signature=\"%@\",oauth_token=\"%@\",xoauth_body_signature=\"%@\",xoauth_body_signature_method=\"HMAC-SHA1\"",
@@ -134,7 +138,8 @@
 					   [SignedRequest URLEncode:string_sig],
 					   [SignedRequest URLEncode:[config accessToken]]];
 	}
-			 
+	[auth_header retain];
+	NSLog(@"header = %@", auth_header);		 
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
 	[request setTimeoutInterval:5]; 
 	[request setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];

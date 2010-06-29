@@ -246,15 +246,15 @@
 	}
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
 	NSMutableString *url = [[NSMutableString alloc] initWithString:@"users/"];
-	[url appendString:[config getActiveUserId]];	
+	[url appendString:userId];	
 	
 	NSMutableDictionary *d = [[NSMutableDictionary alloc] init];
 	[d setObject:url forKey:@"url"];
 	[d setObject:@"GET" forKey:@"method"];
 	[d setObject:[SignedRequest getAcceptTypeWithURI:url] forKey:@"Accept-Type"];
 	
-	[request httpRequestWithDictionary:d];
-	//[request httpGetWithURI:url];
+	//[request httpRequestWithDictionary:d];
+	[request httpGetWithURI:url];
 
 	NSString *result = request.response;
 	
@@ -429,13 +429,27 @@
 	}
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
 	NSMutableString *url = [[NSMutableString alloc] initWithString:@"users/"];
-	//[url appendString:[config getActiveUserId]];
 	[request httpGetWithURI:url];
+	
+	//NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+	//[dict setObject:url forKey:@"url"];
+	//[dict setObject:@"GET" forKey:@"method"];
+	//[dict setObject:[SignedRequest getAcceptTypeWithURI:url] forKey:@"Accept-Type"];
+	
+	//[request httpRequestWithDictionary:dict];
 	NSString* result = request.response;
 	
-	id tempDict = [result JSONValue];
+	SBJSON *parser = [[SBJSON alloc] init];
+	
+	//id tempDict = [result JSONValue];
+	NSDictionary *tempDict = [parser objectWithString:result error:nil];
+	
+	//id tempDict = [result JSONValue];
 	NSArray *dictArray = [tempDict objectForKey:@"entry"];
+	[dictArray retain];
+
 	NSMutableArray *users;
+	NSLog(@"dictArray = %@",dictArray);
 	if (dictArray != nil) {
 		users = [[NSMutableArray alloc]init];
 		int i;

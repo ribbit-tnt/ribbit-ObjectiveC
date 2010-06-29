@@ -59,7 +59,7 @@
 	[request httpGetWithURI:url];
 }
 
--(void) updateUserWithDictionary:(NSDictionary*)dict {
+-(void) updateDeviceWithDictionary:(NSDictionary*)dict {
 	if (config.accountId == NULL) {
 		// raise exception here, TODO figure out exact format
 	}
