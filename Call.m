@@ -138,7 +138,8 @@
 	}
 	//[signedRequest httpPostWithURI:uri vars:dict];
 	//NSLog(@"user id = %@", userId);
-	NSMutableString *url = [[config.endpoint stringByAppendingString:@"calls/"] stringByAppendingString: config.accountId];
+	NSMutableString *url = [[NSMutableString alloc]init];
+	[url appendString:[config.endpoint stringByAppendingString:@"calls/"] stringByAppendingString: config.accountId];
 	[url appendString:@"/"];
 	[url appendString:[dictionary objectForKey:@"callID"]];
 	

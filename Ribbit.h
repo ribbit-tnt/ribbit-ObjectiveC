@@ -13,6 +13,8 @@
 #import "Message.h"
 #import "Device.h"
 #import "User.h"
+#import "JSON.h"
+#import "SBJSON.h"
 #import "Folder.h"
 #import <Foundation/Foundation.h>
 
@@ -21,9 +23,13 @@
  Class to represent a Ribbit object.
  */
 @interface Ribbit : Resource {
-
+	NSError *jsonerror;
+	SBJSON *json;
+	SBJSON *parser;
 }
-
+@property (retain) SBJSON *json;
+@property (retain) SBJSON *parser;
+@property (retain) NSError *jsonerror;
 /**
  Initializes a Ribbit object with a RibbitConfig
  @param ribbitConfig RibbitConfig object

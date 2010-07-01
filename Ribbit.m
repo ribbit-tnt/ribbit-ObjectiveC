@@ -18,9 +18,12 @@
 
 
 @implementation Ribbit
+@synthesize jsonerror, json, parser;
 
 -(id) initWithConfig:(RibbitConfig*)ribbitConfig {
 	[self setConfig:ribbitConfig];
+	json = [SBJSON new];
+	parser = [[SBJSON alloc] init];
 	return self;
 }
 
@@ -136,7 +139,7 @@
 	NSString *result = request.response;
 	[request release];
 	NSLog(@" get Folder result = %@", result);
-	SBJSON *parser = [[SBJSON alloc] init];
+	//SBJSON *parser = [[SBJSON alloc] init];
 	
 	//id tempDict = [result JSONValue];
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
@@ -163,8 +166,8 @@
 	//[signedRequest httpPostWithURI:uri vars:dict];
 	NSString *url = [[config.endpoint stringByAppendingString:@"media/"] stringByAppendingString: config.domain];
 	
-	NSError *jsonerror;
-	SBJSON *json = [SBJSON new];
+	jsonerror = nil;
+	json = [SBJSON new];
 	
 	NSString *body = [json stringWithObject:dict error:&jsonerror];
 	[dict setObject:url forKey:@"url"];
@@ -191,7 +194,13 @@
 	[url appendString:deviceId];
 	[request httpGetWithURI:url];
 	NSString *result = request.response;
-	id tempDict = [result JSONValue];
+	NSString *result = request.response;
+	
+	//SBJSON *parser = [[SBJSON alloc] init];
+	
+	//id tempDict = [result JSONValue];
+	NSDictionary *tempDict = [parser objectWithString:result error:nil];
+	
 	NSDictionary *dict = [tempDict objectForKey:@"entry"];
 	
 	[url release];
@@ -220,8 +229,8 @@
 	
 	NSString *url = [[config.endpoint stringByAppendingString:@"devices"] stringByAppendingString: [config getActiveUserId]];
 	
-	NSError *jsonerror;
-	SBJSON *json = [SBJSON new];
+	jsonerror = nil;
+	json = [SBJSON new];
 	
 	NSString *body = [json stringWithObject:dict error:&jsonerror];
 	[dictionary setObject:url forKey:@"url"];
@@ -244,8 +253,8 @@
 	[dictionary addEntriesFromDictionary:dict];
 	NSString *url = [config.endpoint stringByAppendingString:@"users"];
 	
-	NSError *jsonerror;
-	SBJSON *json = [SBJSON new];
+	jsonerror = nil;
+	json = [SBJSON new];
 	
 	NSString *body = [json stringWithObject:dict error:&jsonerror];
 	[dictionary setObject:url forKey:@"url"];
@@ -275,7 +284,7 @@
 
 	NSString *result = request.response;
 	
-	SBJSON *parser = [[SBJSON alloc] init];
+	//SBJSON *parser = [[SBJSON alloc] init];
 	
 	//id tempDict = [result JSONValue];
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
@@ -387,7 +396,7 @@
 	[request httpGetWithURI:url];
 	NSString* result = request.response;
 	
-	SBJSON *parser = [[SBJSON alloc] init];
+	//SBJSON *parser = [[SBJSON alloc] init];
 	
 	//id tempDict = [result JSONValue];
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
@@ -426,7 +435,7 @@
 	[request httpGetWithURI:uri];
 	NSString* result = request.response;
 	
-	SBJSON *parser = [[SBJSON alloc] init];
+	//SBJSON *parser = [[SBJSON alloc] init];
 	
 	//id tempDict = [result JSONValue];
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
@@ -466,7 +475,7 @@
 	//[request httpRequestWithDictionary:dict];
 	NSString* result = request.response;
 	
-	SBJSON *parser = [[SBJSON alloc] init];
+	//SBJSON *parser = [[SBJSON alloc] init];
 	
 	//id tempDict = [result JSONValue];
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
