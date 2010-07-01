@@ -80,7 +80,7 @@
  Updates a call with the given dictionary
  @param dictionary the dictionary of settings to update the call
  */
--(void)updateCallWithDictionary:(NSDictionary*)dictionary;
+-(void)updateCallWithDictionary:(NSMutableDictionary*)dictionary;
 /**
  Drops a call.
  */

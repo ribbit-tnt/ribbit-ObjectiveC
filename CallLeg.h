@@ -48,6 +48,6 @@
  Updates a CallLeg with the given settings
  @param dictionary the call leg properties to set
  */
--(void)updateLegWithDictionary:(NSDictionary*)dictionary;
+-(void)updateLegWithDictionary:(NSMutableDictionary*)dictionary;
 
 @end

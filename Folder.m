@@ -67,6 +67,7 @@
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
 	NSMutableString *url = [[NSMutableString alloc] initWithString:@"media/"];
 	[url appendString:[config domain]];
+	[url appendString:@"/"];
 	
 	if ([filename hasPrefix:[folderName stringByAppendingString:@"/"]]) {
 		[url appendString:filename];
@@ -75,10 +76,16 @@
 		[url appendString:@"/"];
 		[url appendString:filename];
 	}
+
+	NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+	[dictionary setObject:url forKey:@"url"];
+	[dictionary setObject:@"DELETE" forKey:@"method"];
 	
+//	[request httpRequestWithDictionary:dictionary];
 	[request httpDeleteWithURI:url];
-	[url release];
+	
 	// TODO remove from files collection.
+	[files removeObject:filename];
 }
 
 -(void) fromJSON:(NSArray*)values {
@@ -90,8 +97,8 @@
 		[tempArray addObject:resource];
 	}
 
-	[files initWithArray:tempArray];
-	[values release];	
+	//[files addObjectsFromArray:tempArray];
+	//[values release];	
 }
 
 @end

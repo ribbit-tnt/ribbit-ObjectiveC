@@ -14,11 +14,11 @@
 
 @interface Folder : Resource {
   NSString *folderName;
-  NSArray *files;
+  NSMutableArray *files;
 }
 
 @property (nonatomic, retain) NSString *folderName;
-@property (nonatomic, retain) NSArray *files;
+@property (nonatomic, retain) NSMutableArray *files;
 
 /**
  Initializes a Ribbit object with a RibbitConfig
