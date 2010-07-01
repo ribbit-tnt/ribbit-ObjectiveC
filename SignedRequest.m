@@ -41,7 +41,7 @@
 }
 
 -(void) httpRequestWithDictionary:(NSDictionary*)dict {
-	OAConsumer *consumer = [[OAConsumer alloc] initWithKey:config.consumerKey secret:config.secretKey];
+//	OAConsumer *consumer = [[OAConsumer alloc] initWithKey:config.consumerKey secret:config.secretKey];
 
 	NSString *uri = (NSString*)[dict objectForKey:@"url"];
 	NSString *body_sig, *string_sig, *auth_header;
@@ -66,7 +66,7 @@
 		body = [dict objectForKey:@"json"];
 		body_sig = [self sign_for_oauth:[body UTF8String]];
 	}
-	[body retain];
+//	[body retain];
 	[method retain];
 	[body_sig retain];
 	////(void)NSLog(body);
@@ -81,12 +81,15 @@
 				   timestamp,
 				   [config accessToken],
 				   body_sig];
-	} else if ([dict objectForKey:@"username"] == nil) {	//regular nobody request
-		q = [NSString stringWithFormat:@"oauth_consumer_key=%@&oauth_nonce=%@&oauth_signature_method=HMAC-SHA1&oauth_timestamp=%.0f&oauth_token=%@",
+	} else if ([dict objectForKey:@"username"] == nil) {	//regular no-body request
+		q = [NSString stringWithFormat:@"oauth_consumer_key=%@&oauth_nonce=%@&oauth_signature_method=HMAC-SHA1&oauth_timestamp=%.0f",//&oauth_token=%@",
 			 [config consumerKey],
 			 nonce,
-			 timestamp,
-			 [config accessToken]];
+			 timestamp];//,
+			 //[config accessToken]];
+		if ([config accessToken] != @"") {
+			q = [q stringByAppendingString:[@"&oauth_token=" stringByAppendingString:[config accessToken]]];
+		}
 	} else {	//login
 		q = [NSString stringWithFormat:@"oauth_consumer_key=%@&oauth_nonce=%@&oauth_signature_method=HMAC-SHA1&oauth_timestamp=%.0f&x_auth_password=%@&x_auth_username=%@&oauth_version=1.0",
 			 [config consumerKey],
@@ -108,6 +111,7 @@
 		string_to_sign = [NSString stringWithFormat:@"POST&%@&%@",[SignedRequest URLEncode:url],[SignedRequest URLEncode:q]];
 	}
 	
+	[q release];
 	[string_to_sign retain];
 	[string_sig retain];
 	string_sig = [self sign_for_oauth:[string_to_sign UTF8String]];
@@ -127,16 +131,19 @@
 					   timestamp,
 					   nonce,
 					   [SignedRequest URLEncode:string_sig],
-					   @"testtest",//[dict objectForKey:@"password"],
-					   @"test"];//[dict objectForKey:@"username"]];		 
+					   [dict objectForKey:@"password"],
+					   [dict objectForKey:@"username"]];		 
 	} else {
-		auth_header = [NSString stringWithFormat:@"OAuth realm=\"%@\",oauth_consumer_key=\"%@\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"%.0f\",oauth_nonce=\"%@\",oauth_signature=\"%@\",oauth_token=\"%@\"",
+		auth_header = [NSString stringWithFormat:@"OAuth realm=\"%@\",oauth_consumer_key=\"%@\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"%.0f\",oauth_nonce=\"%@\",oauth_signature=\"%@\"",//,oauth_token=\"%@\"",
 					   [SignedRequest URLEncode:realm],
 					   config.consumerKey,
 					   timestamp,
 					   nonce,
-					   [SignedRequest URLEncode:string_sig],
-					   [SignedRequest URLEncode:[config accessToken]]];
+					   [SignedRequest URLEncode:string_sig]];
+					   //[SignedRequest URLEncode:[config accessToken]]];
+		if ([config accessToken] != @"") {
+			auth_header = [auth_header stringByAppendingString:[@",oauth_token=" stringByAppendingString:[SignedRequest URLEncode:[config accessToken]]]];
+		}
 	}
 	[auth_header retain];
 	NSLog(@"header = %@", auth_header);		 
@@ -188,25 +195,25 @@
 				   outStream:NULL acceptType:[SignedRequest getAcceptTypeWithURI:uri] contentType:NULL inStream:NULL];
 	
 }
-//-(void) httpPostWithURI:(NSString*)uri {
-//	NSLog(@"httpPostWithURI no vars");
-//	[self sendRequestWithURI:uri method:@"POST" 
-//						vars:NULL username:NULL pass:NULL 
-//				   outStream:NULL acceptType:NULL contentType:CONTENT_APPLICATION_JSON inStream:NULL];
-//	
-//}
+-(void) httpPostWithURI:(NSString*)uri {
+	NSLog(@"httpPostWithURI no vars");
+	[self sendRequestWithURI:uri method:@"POST" 
+						vars:NULL username:NULL pass:NULL 
+				   outStream:NULL acceptType:NULL contentType:CONTENT_APPLICATION_JSON inStream:NULL];
+	
+}
 -(void) httpDeleteWithURI:(NSString *)uri {
 	[self sendRequestWithURI:uri method:@"DELETE" 
 						vars:NULL username:NULL pass:NULL 
 				   outStream:NULL acceptType:NULL contentType:NULL inStream:NULL];
 	
 }
--(void) httpPutWithURI:(NSString *)uri variables:(NSDictionary *)vars {
-	[self sendRequestWithURI:uri method:@"PUT" 
-						vars:vars username:NULL pass:NULL 
-				   outStream:NULL acceptType:ACCEPT_APPLICATION_JSON contentType:CONTENT_APPLICATION_JSON	inStream:NULL];
-	
-}
+//-(void) httpPutWithURI:(NSString *)uri variables:(NSDictionary *)vars {
+//	[self sendRequestWithURI:uri method:@"PUT" 
+//						vars:vars username:NULL pass:NULL 
+//				   outStream:NULL acceptType:ACCEPT_APPLICATION_JSON contentType:CONTENT_APPLICATION_JSON	inStream:NULL];
+//	
+//}
 
 
 -(void) sendRequestWithURI:(NSString*)uri method:(NSString*)method vars:(NSDictionary*)vars
@@ -295,12 +302,12 @@
 				  didFailSelector:@selector(requestTokenTicket:didFailWithError:)];
 }
 
-- (void)requestTokenTicket:(OAServiceTicket *)ticket didFinishWithData:(NSData *)data {
+- (void)requestTokenTicket:(OAServiceTicket *)ticket didFinishWithData:(NSData *)streamData {
 //	NSLog(@"data = %@", data);
 //	NSLog(@"my Data: %.*s", [data length], [data bytes]);
 	if (ticket.didSucceed) {
 		//NSLog(@"data = %@", data);
-		NSString *responseBody = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+		NSString *responseBody = [[NSString alloc] initWithData:streamData encoding:NSUTF8StringEncoding];
 		//NSLog(@"responseBody = %@", responseBody);
 		OAToken *requestToken;
 		requestToken = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
@@ -311,10 +318,10 @@
 	
 }
 
-- (void)requestTokenTicket:(OAServiceTicket *)ticket didFailWithError:(NSError *)error {
+- (void)requestTokenTicket:(OAServiceTicket *)ticket didFailWithError:(NSError *)streamError {
 	NSLog(@"ticket_request= %@", ticket.request);
 	NSLog(@"ticket_response= %@", ticket.response);
-    NSLog(@"error= %@", error);
+    NSLog(@"error= %@", streamError);
 }
 
 
@@ -376,12 +383,12 @@
 	return urlString;
 }
 
--(NSString*)sign_for_oauth:(const char*)data {
+-(NSString*)sign_for_oauth:(const char*)oauthData {
 	unsigned char result[CC_SHA1_DIGEST_LENGTH];
 	const char *key = [[NSString stringWithFormat:@"%@&%@", [config secretKey],[config accessSecret]] UTF8String];
 	//const char *key = [[NSString stringWithFormat:@"%@&%@",[RibbitPlatform secretKey],@"dbb9bfc64a0a60025105e4ffe6a31430"] UTF8String];
 	
-	CCHmac(kCCHmacAlgSHA1, key, strlen(key), data, strlen(data), result);
+	CCHmac(kCCHmacAlgSHA1, key, strlen(key), oauthData, strlen(oauthData), result);
 	return [SignedRequest Data_encodeBase64:[NSData dataWithBytes:result length:CC_SHA1_DIGEST_LENGTH]];
 }
 

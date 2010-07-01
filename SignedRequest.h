@@ -54,16 +54,14 @@
 
 -(void)httpGetWithURI:(NSString*)uri;
 -(void)httpDeleteWithURI:(NSString*)uri;
--(void)httpPostWithURI:(NSString*)uri;
+//-(void)httpPostWithURI:(NSString*)uri;
 -(void)httpPostWithURI:(NSString *)uri username:(NSString*)username password:(NSString*)password;
--(void)httpPostWithURI:(NSString *)uri vars:(NSDictionary*) vars;
--(NSString*)httpPostWithURI:(NSString*)uri method:(NSString*)method vars:(NSDictionary*)vars
-							  username:(NSString*)username pass:(NSString*)pass outStream:(NSData*)outData acceptType:(NSString*)acceptType
-				contentType:(NSString*)contentType inStream:(NSData*)inData;
+//-(void)httpPostWithURI:(NSString *)uri vars:(NSDictionary*) vars;
+//-(NSString*)httpPostWithURI:(NSString*)uri method:(NSString*)method vars:(NSDictionary*)vars
+//							  username:(NSString*)username pass:(NSString*)pass outStream:(NSData*)outData acceptType:(NSString*)acceptType
+//				contentType:(NSString*)contentType inStream:(NSData*)inData;
 
 	
--(NSString*)httpPutWithURI:(NSString*)uri variables:(NSDictionary*)vars;
--(void) sendRequestWithDictionary:(NSDictionary*)dict;
 -(void) sendRequestWithURI:(NSString*)uri method:(NSString*)method vars:(NSDictionary*)vars
 					   username:(NSString*)username pass:(NSString*)pass outStream:(NSData*)outData acceptType:(NSString*)acceptType
 					   contentType:(NSString*)contentType inStream:(NSData*)inData;

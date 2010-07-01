@@ -74,6 +74,7 @@
 		NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 		[dict setObject:@"request_token" forKey:@"url"];
 		[dict setObject:@"POST" forKey:@"method"];
+		[dict setObject:@"application/json" forKey:@"Content-Type"];
 		[request httpRequestWithDictionary:dict];
 		
 		//[request httpPostWithURI:@"request_token"];
@@ -128,17 +129,24 @@
 	[url appendString:@"/"];
 	[url appendString:name];
 	[request httpGetWithURI:url];
+	[url release];
 	
 	// TODO replace this with a notifier or selector...is very bad
 	//[NSThread sleepForTimeInterval:10];
-		NSString *result = request.response;
+	NSString *result = request.response;
+	[request release];
 	NSLog(@" get Folder result = %@", result);
-	id tempDict = [result JSONValue];
+	SBJSON *parser = [[SBJSON alloc] init];
+	
+	//id tempDict = [result JSONValue];
+	NSDictionary *tempDict = [parser objectWithString:result error:nil];
+	
 	NSArray *dictArray = [tempDict objectForKey:@"entry"];
+	
 
 	Folder *folder;
 	if (dictArray != nil) {
-		folder = [[Folder alloc] initWithConfig:config];
+		folder = [[[Folder alloc] initWithConfig:config] autorelease];
 		folder.folderName = name;
 		[folder fromJSON:dictArray];
 		return folder;
@@ -166,6 +174,10 @@
 	SignedRequest *signedRequest = [[SignedRequest alloc] initWithConfig:config];
 	[signedRequest httpRequestWithDictionary:dict];
 	
+	[json release];
+	[dict release];
+	[signedRequest release];
+	
 	return [self getFolder:name];
 }
 
@@ -181,9 +193,13 @@
 	NSString *result = request.response;
 	id tempDict = [result JSONValue];
 	NSDictionary *dict = [tempDict objectForKey:@"entry"];
+	
+	[url release];
+	[request release];
+	
 	Device *device;
 	if (dict != nil) {
-		device = [[Device alloc] initWithDictionary:dict ribbitConfig:config];
+		device = [[[Device alloc] initWithDictionary:dict ribbitConfig:config] autorelease];
 		return device;
 	} else {
 		NSLog(@"There was an error processing the device");
@@ -215,7 +231,7 @@
 	SignedRequest *signedRequest = [[SignedRequest alloc] initWithConfig:config];
 	[signedRequest httpRequestWithDictionary:dictionary];
 	
-	[self getDevice:[dict objectForKey:@"deviceId"]];
+	return [self getDevice:[dict objectForKey:@"deviceId"]];
 }
 
 -(User*) createUser:(NSDictionary*)dict {
@@ -238,6 +254,7 @@
 	SignedRequest *signedRequest = [[SignedRequest alloc] initWithConfig:config];
 	[signedRequest httpRequestWithDictionary:dictionary];	
 	// get user details from response
+	return nil;
 }
 
 -(User*) getUser:(NSString*)userId {
@@ -273,7 +290,7 @@
 		NSLog(@"There was an error processing the device");
 		// TODO figure out how to throw error.
 	}
-	return user;
+	return nil;
 }
 
 -(Call*) getCall:(NSString*)callId {
@@ -395,21 +412,31 @@
 	return nil;
 }
 
--(NSArray*) getMessages{
+-(NSArray*) getMessagesFromFolder:(NSString*)folderName{
 	if (config.accountId == NULL) {
 		// raise exception here, TODO figure out exact format
 	}
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
-	NSString *uri = [@"messages/" stringByAppendingString:[config getActiveUserId]];
+	NSMutableString *uri = [[NSMutableString alloc] init];
+	[uri appendString:@"messages/"];
+	[uri appendString:[config getActiveUserId]];
+	[uri appendString:@"/"];
+	[uri appendString:folderName];
+	
 	[request httpGetWithURI:uri];
 	NSString* result = request.response;
 	
-	id tempDict = [result JSONValue];
+	SBJSON *parser = [[SBJSON alloc] init];
+	
+	//id tempDict = [result JSONValue];
+	NSDictionary *tempDict = [parser objectWithString:result error:nil];
+	
 	NSArray *dictArray = [tempDict objectForKey:@"entry"];
 	if (dictArray != nil) {
 		NSMutableArray *messages = [[NSMutableArray alloc]init];
 		int i;
 		for (i=0; i< [dictArray count]; i++) {
+			//NSLog(@"dictArray = %@", [dictArray objectAtIndex:i]);
 			Message *temp = [[Message alloc]initWithDictionary:[dictArray objectAtIndex:i] ribbitConfig:config];
 			[messages addObject:temp];
 			[temp release];
@@ -463,7 +490,7 @@
 		NSLog(@"There was an error processing the services");
 		// TODO figure out how to throw error.
 	}
-	return users;
+	return nil;
 }
 
 - (void)requestTokenTicket:(OAServiceTicket *)ticket didFinishWithData:(NSData *)data {

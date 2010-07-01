@@ -52,5 +52,5 @@
  Updates a Ribbit user with a given dictionary
  @param dict the dictionary of settings to assign to the object
  */
--(void) updateUserWithDictionary:(NSDictionary*)dict;
+-(void) updateUserWithDictionary:(NSMutableDictionary*)dict;
 @end

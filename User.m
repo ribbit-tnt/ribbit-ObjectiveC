@@ -38,7 +38,7 @@
 	return self;
 }
 
--(void) updateUserWithDictionary:(NSDictionary*)dict {
+-(void) updateUserWithDictionary:(NSMutableDictionary*)dict {
 	if (config.accountId == NULL) {
 		// raise exception here, TODO figure out exact format
 	}

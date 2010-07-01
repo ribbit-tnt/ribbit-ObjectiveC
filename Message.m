@@ -49,11 +49,11 @@
     folder = [dictionary objectForKey:@"folder"];
 	newMessage = (BOOL*)[dictionary objectForKey:@"newMessage"];
 	urgentMessage = (BOOL*)[dictionary objectForKey:@"urgentMessage"];
+	self.recipients = [[NSMutableArray alloc] init];
+	self.mediaItems = [[NSMutableArray alloc] init];
 	
-	self.recipients = [[NSMutableArray alloc] initWithObjects:nil];
-	self.mediaItems = [[NSMutableArray alloc] initWithObjects:nil];
-	
-	NSArray *recipientArray = [[NSArray alloc] arrayByAddingObjectsFromArray:[dictionary objectForKey:@"recipients"]];
+	NSMutableArray *recipientArray = [[[NSMutableArray alloc] init ] arrayByAddingObjectsFromArray:[dictionary objectForKey:@"recipients"]];
+
 	int i;
 	for (i=0; i < [recipientArray count]; i++) {
 		NSDictionary *dict = [[NSDictionary alloc] initWithDictionary: [recipientArray objectAtIndex:i]];
@@ -63,7 +63,7 @@
 		[recipients addObject:dest];
 		[dict release];
 	}
-	
+
 	[mediaItems arrayByAddingObjectsFromArray:[dictionary objectForKey:@"mediatItems"]];
 	
 	[dictionary release];
@@ -125,5 +125,7 @@
 	NSLog(@"sendSMS = %@", signedRequest.response);
 }
 
-
+- (NSString *)description {
+	return [NSString stringWithFormat:@"Message: Id=%@",[self messageId]];
+}
 @end

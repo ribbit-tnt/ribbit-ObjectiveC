@@ -108,7 +108,7 @@
  Gets an array of existing messages
  @returns an array of messages
  */
--(NSArray*) getMessages;
+-(NSArray*) getMessagesFromFolder:(NSString*)folderName;
 
 /**
  Gets an array of available services

@@ -82,7 +82,7 @@
 	NSString *uri = [[@"services/" stringByAppendingString:[config getActiveUserId]] stringByAppendingString:serviceId];
 	[request httpPutWithURI:uri variables:vars];
 	
-	voicemail = voicemailStatus;
+	voicemail = (BOOL)voicemailStatus;
 	
 }
 
