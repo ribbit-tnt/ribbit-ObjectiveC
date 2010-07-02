@@ -113,9 +113,18 @@
 
 /**
  Gets an array of existing messages
+ @param folderName the folder to retrieve messages from
  @returns an array of messages
  */
 -(NSArray*) getMessagesFromFolder:(NSString*)folderName;
+/**
+ Gets an array of existing messages
+ @param folderName the folder to retrieve messages from
+ @param filterName the name of the filter to apply to the results
+ @param filterValue the value of the filter to apply
+ @returns an array of messages
+ */
+-(NSArray*) getMessagesWithDictionary:(NSDictionary*)dict;
 
 /**
  Gets an array of available services

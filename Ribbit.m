@@ -423,6 +423,45 @@
 	return nil;
 }
 
+
+-(NSArray*) getMessagesWithDictionary:(NSMutableDictionary*)dict {
+	if (config.accountId == NULL) {
+		// raise exception here, TODO figure out exact format
+	}
+	NSString *folderName = [dict objectForKey:@"folderName"];
+	[dict removeObjectForKey:@"folderName"];
+	
+	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
+	NSMutableString *uri = [[NSMutableString alloc] init];
+	[uri appendString:@"messages/"];
+	[uri appendString:[config getActiveUserId]];
+	[uri appendString:@"/"];
+	[uri appendString:folderName];
+	[uri appendString:[Resource convertMapToQueryString:dict]];
+	
+	[request httpGetWithURI:uri];
+	NSString* result = request.response;
+	
+	NSDictionary *tempDict = [parser objectWithString:result error:nil];
+	
+	NSArray *dictArray = [tempDict objectForKey:@"entry"];
+	if (dictArray != nil) {
+		NSMutableArray *messages = [[NSMutableArray alloc]init];
+		int i;
+		for (i=0; i< [dictArray count]; i++) {
+			//NSLog(@"dictArray = %@", [dictArray objectAtIndex:i]);
+			Message *temp = [[Message alloc]initWithDictionary:[dictArray objectAtIndex:i] ribbitConfig:config];
+			[messages addObject:temp];
+			[temp release];
+		}
+		return messages;
+	} else {
+		NSLog(@"There was an error processing the messages");
+		// TODO figure out how to throw error.
+	}
+	return nil;
+}
+
 -(NSArray*) getMessagesFromFolder:(NSString*)folderName{
 	if (config.accountId == NULL) {
 		// raise exception here, TODO figure out exact format
