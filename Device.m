@@ -55,8 +55,9 @@
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
 	NSMutableString *url = [[NSMutableString alloc] initWithString:@"devices/"];
 	[url appendString:[config getActiveUserId]];
+	[url appendString:@"/"];
 	[url appendString:[self deviceId]];
-	[request httpGetWithURI:url];
+	[request httpDeleteWithURI:url];
 }
 
 -(void) updateDeviceWithDictionary:(NSDictionary*)dict {

@@ -190,10 +190,10 @@
 	}
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
 	NSMutableString *url = [[NSMutableString alloc] initWithString:@"devices/"];
-	[url appendString:[config getActiveUserId]];	
+	[url appendString:[config getActiveUserId]];
+	[url appendString:@"/"];
 	[url appendString:deviceId];
 	[request httpGetWithURI:url];
-	NSString *result = request.response;
 	NSString *result = request.response;
 	
 	//SBJSON *parser = [[SBJSON alloc] init];
@@ -211,8 +211,7 @@
 		device = [[[Device alloc] initWithDictionary:dict ribbitConfig:config] autorelease];
 		return device;
 	} else {
-		NSLog(@"There was an error processing the device");
-		// TODO figure out how to throw error.
+		NSLog(@"There was an error processing the device or no device for the value.");
 	}
 	return nil;
 }
@@ -368,8 +367,10 @@
 	[request httpGetWithURI:uri];
 	NSString* result = request.response;
 	
-	id tempDict = [result JSONValue];
+	NSDictionary *tempDict = [parser objectWithString:result error:nil];
+	
 	NSArray *dictArray = [tempDict objectForKey:@"entry"];
+	
 	if (dictArray != nil) {
 		NSMutableArray *devices = [[NSMutableArray alloc]init];
 		int i;
