@@ -12,5 +12,25 @@
 @implementation Resource
 
 @synthesize config;
-
++(NSString*) convertMapToQueryString:(NSDictionary*)dict {
+	//startIndex, count, filterBy, filterValue
+	
+	NSMutableString *temp = [[[NSMutableString alloc]init]autorelease];
+	[temp appendString:@"?"];
+	NSArray *allKeys = [dict allKeys];
+	
+	int i;
+	for(i = 0; i<[allKeys count]; i++) {
+		NSString *key = (NSString*)[allKeys objectAtIndex:i];
+		NSObject *value = [dict objectForKey:key];
+		[temp appendString:key];
+		[temp appendString:@"="];
+		[temp appendString:value];
+		
+		if (i < [allKeys count] -1) {
+			[temp appendString:@"&"];
+		}
+	}
+	return temp;
+}
 @end

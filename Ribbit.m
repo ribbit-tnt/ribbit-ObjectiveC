@@ -196,9 +196,6 @@
 	[request httpGetWithURI:url];
 	NSString *result = request.response;
 	
-	//SBJSON *parser = [[SBJSON alloc] init];
-	
-	//id tempDict = [result JSONValue];
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
 	
 	NSDictionary *dict = [tempDict objectForKey:@"entry"];
@@ -221,7 +218,6 @@
 		// raise exception here, TODO figure out exact format
 	}
 	
-	//[signedRequest httpPostWithURI:uri vars:dict];
 	NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
 	[dictionary addEntriesFromDictionary:dict];
 	
@@ -326,16 +322,20 @@
 	return nil;
 }
 
--(NSArray*)getCalls {
+-(NSArray*)getCalls:(NSDictionary*)dict {
 	if (config.accountId == NULL) {
 		// raise exception here, TODO figure out exact format
 	}
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
-	NSString *uri = [@"calls/" stringByAppendingString:[config getActiveUserId]];
+	NSMutableString *uri = [[NSMutableString alloc] init];
+	[uri appendString:[@"calls/" stringByAppendingString:[config getActiveUserId]]];
+	[uri appendString:[Resource convertMapToQueryString:dict]];
+
 	[request httpGetWithURI:uri];
 	NSString* result = request.response;
 	
-	id tempDict = [result JSONValue];
+	NSDictionary *tempDict = [parser objectWithString:result error:nil];
+
 	NSArray *dictArray = [tempDict objectForKey:@"entry"];
 	if (dictArray != nil) {
 		NSMutableArray *calls = [[NSMutableArray alloc]init];
@@ -344,6 +344,7 @@
 			Call *temp = [[Call alloc]initWithDictionary:[dictArray objectAtIndex:i] ribbitConfig:config];
 			[calls addObject:temp];
 			[temp release];
+			
 		}
 		return calls;
 	} else {

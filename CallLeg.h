@@ -15,7 +15,7 @@
 @interface CallLeg : Resource {
 	NSString *callID;
 	NSString *callLegId;
-
+	NSString *status;
     NSDate *startTime;
     NSDate *answerTime;
     NSDate *endTime;
@@ -27,6 +27,7 @@
 }
 @property (nonatomic, retain) NSString *callID;
 @property (nonatomic, retain) NSString *callLegId;
+@property (retain) NSString *status;
 @property (nonatomic, retain) NSDate *startTime;
 @property (nonatomic, retain) NSDate *answerTime;
 @property (nonatomic, retain) NSDate *endTime;

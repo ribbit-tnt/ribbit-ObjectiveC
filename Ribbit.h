@@ -100,9 +100,10 @@
 
 /**
  Gets an array of existing calls
+ @param dict the dictionary describing the calls to retrieve
  @returns an array of calls
  */
--(NSArray*) getCalls;
+-(NSArray*) getCalls:(NSDictionary*)dict;
 
 /**
  Gets an array of existing devices

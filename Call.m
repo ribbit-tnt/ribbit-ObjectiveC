@@ -50,21 +50,33 @@
     active = (BOOL*)[dictionary objectForKey:@"active"];
     recording = (BOOL*)[dictionary objectForKey:@"recording"];
 	outbound = (BOOL*)[dictionary objectForKey:@"outbound"];
-	
+
 	self.legs = [[NSMutableArray alloc] initWithObjects:nil];
 	self.recordings = [[NSMutableArray alloc] initWithObjects:nil];
 	
-	NSArray *legsArray = [[NSArray alloc] arrayByAddingObjectsFromArray:[dictionary objectForKey:@"legs"]];
+	NSArray *legsArray = [[[NSArray alloc]init] arrayByAddingObjectsFromArray:[dictionary objectForKey:@"legs"]];
 	int i;
 	for (i=0; i < [legsArray count]; i++) {
+		NSDictionary *legDict = (NSDictionary*)[legsArray objectAtIndex:i];
 		// parse multileg object here
+		CallLeg *callLeg = [[CallLeg alloc] init];
+		callLeg.callLegId = [legDict objectForKey:@"id"];
+		callLeg.startTime = [legDict objectForKey:@"startTime"];
+		callLeg.endTime = [legDict objectForKey:@"startTime"];
+		callLeg.duration = [legDict objectForKey:@"startTime"];
+		callLeg.playing = [legDict objectForKey:@"startTime"];
+		callLeg.recording = [legDict objectForKey:@"startTime"];
+		callLeg.status = [legDict objectForKey:@"startTime"];
+		[legs addObject:callLeg];
+		[legDict release];
 	}
 	
-	NSArray *recordingsArray = [[NSArray alloc] arrayByAddingObjectsFromArray:[dictionary objectForKey:@"recordings"]];
+	NSArray *recordingsArray = [[[NSArray alloc] init  ]arrayByAddingObjectsFromArray:[dictionary objectForKey:@"recordings"]];
 	for (i=0; i < [recordingsArray count]; i++) {
-		// parse multileg object here
+		NSString *recording = [recordingsArray objectAtIndex:i];
+		[recordings addObject:recording];
+		[recording release];
 	}
-	
 	[dictionary release];
 	return self;
 }

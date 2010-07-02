@@ -16,5 +16,5 @@
 	
 }
 @property (nonatomic, retain) RibbitConfig *config;
-
++(NSString*) convertMapToQueryString:(NSDictionary*)dict;
 @end

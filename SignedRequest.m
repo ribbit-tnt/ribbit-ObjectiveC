@@ -45,7 +45,8 @@
 
 	NSString *uri = (NSString*)[dict objectForKey:@"url"];
 	NSString *body_sig, *string_sig, *auth_header;
-	NSString *body, *string_to_sign, *q;
+	NSString *jsonBody, *string_to_sign, *q;
+	NSData *dataBody = nil;
 	NSString *method, *url;
 	
 	if ([uri hasPrefix:@"http"]) 
@@ -63,9 +64,14 @@
 	}
 	
 	if ([dict objectForKey:@"json"] != nil) {
-		body = [dict objectForKey:@"json"];
-		body_sig = [self sign_for_oauth:[body UTF8String]];
+		jsonBody = [dict objectForKey:@"json"];
+		body_sig = [self sign_for_oauth:[jsonBody UTF8String]];
 	}
+	if ([dict objectForKey:@"data"] != nil) {
+		dataBody = [dict objectForKey:@"data"];
+	}
+	 
+	
 //	[body retain];
 	[method retain];
 	[body_sig retain];
@@ -74,7 +80,7 @@
 	NSString *nonce = [SignedRequest generate_nonce];
 	double timestamp = [SignedRequest current_millis];
 	
-	if (body != nil) {
+	if (jsonBody != nil) {
 		q = [NSString stringWithFormat:@"oauth_consumer_key=%@&oauth_nonce=%@&oauth_signature_method=HMAC-SHA1&oauth_timestamp=%.0f&oauth_token=%@&xoauth_body_signature=%@&xoauth_body_signature_method=HMAC-SHA1",
 				   [config consumerKey],
 				   nonce,
@@ -115,7 +121,7 @@
 	[string_to_sign retain];
 	[string_sig retain];
 	string_sig = [self sign_for_oauth:[string_to_sign UTF8String]];
-	if (body != nil) {		// Has a body
+	if (jsonBody != nil) {		// Has a body
 		auth_header = [NSString stringWithFormat:@"OAuth realm=\"%@\",oauth_consumer_key=\"%@\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"%.0f\",oauth_nonce=\"%@\",oauth_signature=\"%@\",oauth_token=\"%@\",xoauth_body_signature=\"%@\",xoauth_body_signature_method=\"HMAC-SHA1\"",
 							 [SignedRequest URLEncode:realm],
 							 config.consumerKey,
@@ -168,11 +174,14 @@
 	[request addValue:@"Ribbit_ObjectiveC" forHTTPHeaderField: @"User-Agent"];
 	
 	//	if(cookies) [request setAllHTTPHeaderFields:[NSHTTPCookie requestHeaderFieldsWithCookies:cookies]];
-	if (body != nil) {
+	if (jsonBody != nil) {
 	//	NSNumber *length = [NSNumber numberWithUnsignedInteger:[body length]];
 	//	NSString *postLength = [length stringValue];		
 	//	[request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-		[request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
+		[request setHTTPBody:[jsonBody dataUsingEncoding:NSUTF8StringEncoding]];
+	}
+	if (dataBody != nil) {
+		[request setHTTPBody:dataBody];
 	}
 //	urlRequest = request;
 //	[self start];

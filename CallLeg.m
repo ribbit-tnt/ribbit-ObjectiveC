@@ -15,7 +15,7 @@
 
 @synthesize callID;
 @synthesize callLegId;
-//CallStatus status
+@synthesize status;
 @synthesize startTime;
 @synthesize answerTime;
 @synthesize endTime;
