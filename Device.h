@@ -37,11 +37,11 @@
  Updates a call with the given dictionary
  @param dictionary the dictionary of settings to update the call
  */
--(void) updateDeviceWithDictionary:(NSDictionary*)dict;
+-(void) updateDeviceWithDictionary:(NSMutableDictionary*)dict;
 
 /**
  Returns a NSString representing the device id
- @ the device id
+ @returns the device id
  */
 -(NSString*)deviceId;
 
