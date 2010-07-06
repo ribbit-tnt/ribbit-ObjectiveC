@@ -151,7 +151,7 @@
  Creates a new device for the given dictionary
  @param dict the dictionary describing the device to create
  */
--(Device*) createDevice:(NSDictionary*)dict;
+-(Device*) createDevice:(NSMutableDictionary*)dict;
 /**
   Asks the REST server to create an authentication request token, and returns a URL to which a user should navigate in order to approve it
   @param callbackUrl A URL to which the user should be returned

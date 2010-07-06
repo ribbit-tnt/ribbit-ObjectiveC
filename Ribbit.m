@@ -213,29 +213,24 @@
 	return nil;
 }
 
--(Device*) createDevice:(NSDictionary*)dict {
+-(Device*) createDevice:(NSMutableDictionary*)dict {
 	if (config.accountId == NULL) {
 		// raise exception here, TODO figure out exact format
 	}
 	
-	NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-	[dictionary addEntriesFromDictionary:dict];
-	
-	
-	NSString *url = [[config.endpoint stringByAppendingString:@"devices"] stringByAppendingString: [config getActiveUserId]];
-	
+	NSString *url = [[config.endpoint stringByAppendingString:@"devices/"] stringByAppendingString: [config getActiveUserId]];
 	jsonerror = nil;
 	json = [SBJSON new];
 	
 	NSString *body = [json stringWithObject:dict error:&jsonerror];
-	[dictionary setObject:url forKey:@"url"];
-	[dictionary setObject:body forKey:@"json"];
-	
+	[dict setObject:url forKey:@"url"];
+	[dict setObject:@"POST" forKey:@"method"];
+	[dict setObject:body forKey:@"json"];
 	
 	SignedRequest *signedRequest = [[SignedRequest alloc] initWithConfig:config];
-	[signedRequest httpRequestWithDictionary:dictionary];
+	[signedRequest httpRequestWithDictionary:dict];
 	
-	return [self getDevice:[dict objectForKey:@"deviceId"]];
+	return [self getDevice:[dict objectForKey:@"id"]];
 }
 
 -(User*) createUser:(NSDictionary*)dict {
