@@ -64,5 +64,9 @@
  Sends an SMS message
  */
 -(void)sendSMS;
-
+/**
+ Updates a message with the given dictionary
+ @param dictionary the dictionary of settings to update the message
+ */
+-(void)updateMessageWithDictionary:(NSMutableDictionary*)dictionary;
 @end

@@ -349,9 +349,26 @@
 	return nil;
 }
 
-
 -(Message*) getMessage:(NSDictionary*)dict {
-	return nil;
+	if (config.accountId == NULL) {
+		// raise exception here, TODO figure out exact format
+	}
+	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
+	NSMutableString *uri = [[NSMutableString alloc] init];
+	[uri appendString:[@"messages/" stringByAppendingString:[config getActiveUserId]]];
+	[uri appendString:@"/"];
+	[uri appendString:[dict objectForKey:@"folderName"]];
+	[uri appendString:@"/"];
+	[uri appendString:[dict objectForKey:@"id"]];
+	
+	[request httpGetWithURI:uri];
+	NSString* result = request.response;
+	 
+	NSDictionary *tempDict = [parser objectWithString:result error:nil];
+	 
+	NSDictionary *dictionary = (NSDictionary*)[tempDict objectForKey:@"entry"];
+	Message *message = [[Message alloc] initWithDictionary:dictionary ribbitConfig:config];
+	return message;
 }
 
 -(NSArray*)getDevices {

@@ -125,6 +125,36 @@
 	NSLog(@"sendSMS = %@", signedRequest.response);
 }
 
+-(void)updateMessageWithDictionary:(NSMutableDictionary *)dictionary {
+	if (config.accountId == NULL) {
+		// raise exception here, TODO figure out exact format
+	}
+
+	//[signedRequest httpPostWithURI:uri vars:dict];
+	//NSLog(@"user id = %@", userId);
+
+	NSMutableString *url = [[NSMutableString alloc]init];
+	[url appendString:@"messages/"];
+	[url appendString:[config getActiveUserId]];
+	[url appendString:@"/"];
+	[url appendString:folder];
+	[url appendString:@"/"];
+	[url appendString:messageId];	
+	
+	SignedRequest *signedRequest = [[SignedRequest alloc] initWithConfig:config];
+	[dictionary setObject:@"PUT" forKey:@"method"];
+	[dictionary setObject:url forKey:@"url"];
+	
+	NSError *jsonerror;
+	SBJSON *json = [SBJSON new];
+	
+	NSString *body = [json stringWithObject:dictionary error:&jsonerror];
+	[dictionary setObject:body forKey:@"json"];
+	
+	
+	[signedRequest httpRequestWithDictionary:dictionary];
+}
+
 - (NSString *)description {
 	return [NSString stringWithFormat:@"Message: Id=%@",[self messageId]];
 }
