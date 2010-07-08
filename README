@@ -1,5 +1,15 @@
-Excuse the mess…
+Excuse the mess...
 
 This library currently uses OAuthConsumer (http://code.google.com/p/oauthconsumer/) but it will probably be factored out.
 
 TODO: Add license terms
+Known issues: Post request responses are not getting retrieved
+File upload and download not currently implemented
+
+Working:
+Making and updating calls (and call legs)
+Creating SMS
+Creating, updating, and deleting devices
+Creating and updating users
+Retrieving and assigning services to folders
+Creating and deleting folders
