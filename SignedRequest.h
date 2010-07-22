@@ -47,21 +47,12 @@
 -(id)initWithConfig:(RibbitConfig*)ribbitConfig;
 -(id)initWithRealm:(NSString*)realmString andConfig:(RibbitConfig*)ribbitConfig;
 //Refactor of requests
--(void)httpGetWithDictionary:(NSDictionary*)dict;
 -(void)httpRequestWithDictionary:(NSDictionary*)dict;
--(void)httpPutWithDictionary:(NSDictionary*)dict;
--(void)httpDeleteWithDictionary:(NSDictionary*)dict;
+
 
 
 -(void)httpGetWithURI:(NSString*)uri;
 -(void)httpDeleteWithURI:(NSString*)uri;
-//-(void)httpPostWithURI:(NSString*)uri;
--(void)httpPostWithURI:(NSString *)uri username:(NSString*)username password:(NSString*)password;
-//-(void)httpPostWithURI:(NSString *)uri vars:(NSDictionary*) vars;
-//-(NSString*)httpPostWithURI:(NSString*)uri method:(NSString*)method vars:(NSDictionary*)vars
-//							  username:(NSString*)username pass:(NSString*)pass outStream:(NSData*)outData acceptType:(NSString*)acceptType
-//				contentType:(NSString*)contentType inStream:(NSData*)inData;
-
 	
 -(void) sendRequestWithURI:(NSString*)uri method:(NSString*)method vars:(NSDictionary*)vars
 					   username:(NSString*)username pass:(NSString*)pass outStream:(NSData*)outData acceptType:(NSString*)acceptType
@@ -71,10 +62,9 @@
 + (NSString*)Data_encodeBase64:(NSData*) data;
 -(NSString*) normalizeURL:(NSString *)urlString;
 -(NSString*) signForOAuthWithBody:(NSString *) bodyToSign;
-//-(NSString*) signForOAuthWithText:(NSString*) textToSign;
 -(NSString*) signForOAuthWithText:(NSString*) textToSign consumer:(OAConsumer*)consumer access:(OAToken*)token;
 -(void)getDataWithRequest:(NSMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector; 
-// from Dustin's code
+
 + (NSDate*)ribbitUTCToTime:(NSString*)ribbitUTC;
 + (NSDate*)ribbitUTCToDate:(NSString*)ribbitUTC;
 + (NSString*)titleForHTTPReturnNumber:(NSInteger)errorNum;

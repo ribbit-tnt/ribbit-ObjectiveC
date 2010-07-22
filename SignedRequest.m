@@ -214,26 +214,13 @@
 				   outStream:NULL acceptType:[SignedRequest getAcceptTypeWithURI:uri] contentType:NULL inStream:NULL];
 	
 }
--(void) httpPostWithURI:(NSString*)uri {
-	NSLog(@"httpPostWithURI no vars");
-	[self sendRequestWithURI:uri method:@"POST" 
-						vars:NULL username:NULL pass:NULL 
-				   outStream:NULL acceptType:NULL contentType:CONTENT_APPLICATION_JSON inStream:NULL];
-	
-}
+
 -(void) httpDeleteWithURI:(NSString *)uri {
 	[self sendRequestWithURI:uri method:@"DELETE" 
 						vars:NULL username:NULL pass:NULL 
 				   outStream:NULL acceptType:NULL contentType:NULL inStream:NULL];
 	
 }
-//-(void) httpPutWithURI:(NSString *)uri variables:(NSDictionary *)vars {
-//	[self sendRequestWithURI:uri method:@"PUT" 
-//						vars:vars username:NULL pass:NULL 
-//				   outStream:NULL acceptType:ACCEPT_APPLICATION_JSON contentType:CONTENT_APPLICATION_JSON	inStream:NULL];
-//	
-//}
-
 
 -(void) sendRequestWithURI:(NSString*)uri method:(NSString*)method vars:(NSDictionary*)vars
 				  username:(NSString*)username pass:(NSString*)pass outStream:(NSData*)outData acceptType:(NSString*)acceptType
