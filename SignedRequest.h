@@ -26,7 +26,7 @@
 	RibbitConfig *config;
 	NSString *realm;
 	
-	NSNumber *timestamp;
+	double timestamp;
 	NSString *response;
 	NSMutableData *data;
 	

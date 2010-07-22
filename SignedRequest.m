@@ -30,7 +30,7 @@
 -(id)initWithConfig:(RibbitConfig*)ribbitConfig {
 	self = [super init];
 	self.config = ribbitConfig;
-	self.realm = @"\"http://oauth.ribbit.com\"";
+	self.realm = @"http://oauth.ribbit.com";
 	return (self);
 }
 
@@ -76,7 +76,7 @@
 
 	// Create the string for the auth header signature
 	NSString *nonce = [SignedRequest generate_nonce];
-	timestamp = [NSNumber numberWithDouble:[SignedRequest current_millis]];
+	timestamp = [SignedRequest current_millis];
 	NSLog(@"%d", timestamp);
 
 	[nonce retain];
@@ -91,16 +91,15 @@
 	} else if ([dict objectForKey:@"username"] == nil) {	//regular no-body request
 		NSLog(@"here42");
 
-		q = [NSString stringWithFormat:@"oauth_consumer_key=%@&oauth_nonce=%@&oauth_signature_method=HMAC-SHA1&oauth_timestamp=%.0f&oauth_version=1.0",//&oauth_token=%@",
+		q = [NSString stringWithFormat:@"oauth_consumer_key=%@&oauth_nonce=%@&oauth_signature_method=HMAC-SHA1&oauth_timestamp=%.0f",//&oauth_token=%@",
 			 [config consumerKey],
 			 nonce,
 			 timestamp];
 		
 		if ([config accessToken] != nil) {
-			NSLog(@"here242");
-			NSLog(@"token = %@", [config accessToken]);
 			q = [q stringByAppendingString:[@"&oauth_token=" stringByAppendingString:[config accessToken]]];
-		}
+			q = [q stringByAppendingString:@"&oauth_version=1.0"];
+		} else q = [q stringByAppendingString:@"&oauth_version=1.0"];
 	} else {	//login
 		q = [NSString stringWithFormat:@"oauth_consumer_key=%@&oauth_nonce=%@&oauth_signature_method=HMAC-SHA1&oauth_timestamp=%.0f&x_auth_password=%@&x_auth_username=%@&oauth_version=1.0",
 			 [config consumerKey],
@@ -162,10 +161,13 @@
 			[temp appendString:@"\""];
 			[temp appendString:@",oauth_version=\"1.0\""];
 			auth_header = temp;
+		} else {
+			auth_header = [auth_header stringByAppendingString:@",oauth_version=\"1.0\""];
 		}
+		
 	}
 	[auth_header retain];
-	
+	NSLog(@"auth = %@", auth_header);
 	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:url]];
 	[ASIHTTPRequest setDefaultTimeOutSeconds:15];
 	
@@ -191,6 +193,7 @@
 	[request startSynchronous];
 	error = [request error];
 	NSLog(@"error = %@", error);
+	NSLog(@"headers = %@", [request responseHeaders]);
 	if (!error) {
 		if ([[request requestMethod] isEqualToString:@"POST"] || [[request requestMethod] isEqualToString:@"PUT"]) {
 			NSDictionary *headers = [request responseHeaders];
