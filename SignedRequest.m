@@ -16,6 +16,7 @@
 #import "OAToken.h"
 #import "JSON.h"
 #import <CommonCrypto/CommonHMAC.h>
+#import "ASIHTTPRequest.h"
 
 
 @implementation SignedRequest
@@ -41,11 +42,10 @@
 }
 
 -(void) httpRequestWithDictionary:(NSDictionary*)dict {
-//	OAConsumer *consumer = [[OAConsumer alloc] initWithKey:config.consumerKey secret:config.secretKey];
 
 	NSString *uri = (NSString*)[dict objectForKey:@"url"];
-	NSString *body_sig, *string_sig, *auth_header;
-	NSString *jsonBody, *string_to_sign, *q;
+	NSString *body_sig = nil, *string_sig, *auth_header;
+	NSString *jsonBody = nil, *string_to_sign, *q;
 	NSData *dataBody = nil;
 	NSString *method, *url;
 	
@@ -62,7 +62,6 @@
 	} else {
 		method = @"POST";
 	}
-	
 	if ([dict objectForKey:@"json"] != nil) {
 		jsonBody = [dict objectForKey:@"json"];
 		body_sig = [self sign_for_oauth:[jsonBody UTF8String]];
@@ -72,13 +71,15 @@
 	}
 	 
 	
-//	[body retain];
 	[method retain];
 	[body_sig retain];
-	////(void)NSLog(body);
+
 	// Create the string for the auth header signature
 	NSString *nonce = [SignedRequest generate_nonce];
-	double timestamp = [SignedRequest current_millis];
+	timestamp = [NSNumber numberWithDouble:[SignedRequest current_millis]];
+	NSLog(@"%d", timestamp);
+
+	[nonce retain];
 	
 	if (jsonBody != nil) {
 		q = [NSString stringWithFormat:@"oauth_consumer_key=%@&oauth_nonce=%@&oauth_signature_method=HMAC-SHA1&oauth_timestamp=%.0f&oauth_token=%@&xoauth_body_signature=%@&xoauth_body_signature_method=HMAC-SHA1",
@@ -88,12 +89,16 @@
 				   [config accessToken],
 				   body_sig];
 	} else if ([dict objectForKey:@"username"] == nil) {	//regular no-body request
-		q = [NSString stringWithFormat:@"oauth_consumer_key=%@&oauth_nonce=%@&oauth_signature_method=HMAC-SHA1&oauth_timestamp=%.0f",//&oauth_token=%@",
+		NSLog(@"here42");
+
+		q = [NSString stringWithFormat:@"oauth_consumer_key=%@&oauth_nonce=%@&oauth_signature_method=HMAC-SHA1&oauth_timestamp=%.0f&oauth_version=1.0",//&oauth_token=%@",
 			 [config consumerKey],
 			 nonce,
-			 timestamp];//,
-			 //[config accessToken]];
-		if ([config accessToken] != @"") {
+			 timestamp];
+		
+		if ([config accessToken] != nil) {
+			NSLog(@"here242");
+			NSLog(@"token = %@", [config accessToken]);
 			q = [q stringByAppendingString:[@"&oauth_token=" stringByAppendingString:[config accessToken]]];
 		}
 	} else {	//login
@@ -106,7 +111,7 @@
 	}
 	[q retain];
 	
-	
+	NSLog(@"q = %@", q);
 	if ([method isEqualToString:@"PUT"]) {
 		string_to_sign = [NSString stringWithFormat:@"PUT&%@&%@",[SignedRequest URLEncode:url],[SignedRequest URLEncode:q]];
 	} else if ([method isEqualToString:@"GET"]) {
@@ -122,7 +127,7 @@
 	[string_sig retain];
 	string_sig = [self sign_for_oauth:[string_to_sign UTF8String]];
 	if (jsonBody != nil) {		// Has a body
-		auth_header = [NSString stringWithFormat:@"OAuth realm=\"%@\",oauth_consumer_key=\"%@\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"%.0f\",oauth_nonce=\"%@\",oauth_signature=\"%@\",oauth_token=\"%@\",xoauth_body_signature=\"%@\",xoauth_body_signature_method=\"HMAC-SHA1\"",
+		auth_header = [NSString stringWithFormat:@"OAuth realm=\"%@\", oauth_consumer_key=\"%@\", oauth_signature_method=\"HMAC-SHA1\", oauth_timestamp=\"%.0f\", oauth_nonce=\"%@\", oauth_signature=\"%@\", oauth_token=\"%@\", xoauth_body_signature=\"%@\", xoauth_body_signature_method=\"HMAC-SHA1\"",
 							 [SignedRequest URLEncode:realm],
 							 config.consumerKey,
 							 timestamp,
@@ -131,14 +136,17 @@
 							 [SignedRequest URLEncode:[config accessToken]],
 							 [SignedRequest URLEncode:body_sig]];
 	} else if ([dict objectForKey:@"username"] != nil){			//Login
-		auth_header = [NSString stringWithFormat:@"OAuth realm=\"%@\",oauth_consumer_key=\"%@\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"%.0f\",oauth_nonce=\"%@\",oauth_signature=\"%@\",oauth_token=\"%@\", x_auth_password=\"%@\", x_auth_username=\"%@\",oauth_version=\"1.0\"",
+		NSLog(@"%d", timestamp);
+		auth_header = [NSString stringWithFormat:@"OAuth realm=\"%@\", oauth_consumer_key=\"%@\", oauth_signature_method=\"HMAC-SHA1\", oauth_timestamp=\"%.0f\", oauth_nonce=\"%@\", oauth_signature=\"%@\", oauth_token=\"%@\", x_auth_password=\"%@\", x_auth_username=\"%@\", oauth_version=\"1.0\"",
 					   [SignedRequest URLEncode:realm],
 					   config.consumerKey,
 					   timestamp,
 					   nonce,
 					   [SignedRequest URLEncode:string_sig],
 					   [dict objectForKey:@"password"],
-					   [dict objectForKey:@"username"]];		 
+					   [dict objectForKey:@"username"]];		
+		NSLog(@"auth %@", auth_header);
+
 	} else {
 		auth_header = [NSString stringWithFormat:@"OAuth realm=\"%@\",oauth_consumer_key=\"%@\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"%.0f\",oauth_nonce=\"%@\",oauth_signature=\"%@\"",//,oauth_token=\"%@\"",
 					   [SignedRequest URLEncode:realm],
@@ -146,49 +154,51 @@
 					   timestamp,
 					   nonce,
 					   [SignedRequest URLEncode:string_sig]];
-					   //[SignedRequest URLEncode:[config accessToken]]];
 		if ([config accessToken] != @"") {
-			auth_header = [auth_header stringByAppendingString:[@",oauth_token=" stringByAppendingString:[SignedRequest URLEncode:[config accessToken]]]];
+			NSMutableString *temp = [[[NSMutableString alloc] init] autorelease];
+			[temp appendString:auth_header];
+			[temp appendString:@",oauth_token=\""];
+			[temp appendString:[SignedRequest URLEncode:[config accessToken]]];
+			[temp appendString:@"\""];
+			[temp appendString:@",oauth_version=\"1.0\""];
+			auth_header = temp;
 		}
 	}
 	[auth_header retain];
-	NSLog(@"header = %@", auth_header);		 
-	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
-	[request setTimeoutInterval:5]; 
-	[request setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
-	[request setURL:[NSURL URLWithString:url]];
-	[request setHTTPMethod:method];
 	
-	[request addValue:auth_header forHTTPHeaderField: @"Authorization"];
+	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:url]];
+	[ASIHTTPRequest setDefaultTimeOutSeconds:15];
+	
+	[request addRequestHeader:@"Authorization" value:auth_header];
 	if ([dict objectForKey:@"Accept-Type"] == nil)
-		[request addValue:@"application/json" forHTTPHeaderField: @"Accept"];
+		[request addRequestHeader:@"Accept" value:@"application/json"];
 	else 
-		[request addValue:[dict objectForKey:@"Accept-Type"] forHTTPHeaderField: @"Accept"];
-	
+		[request addRequestHeader:@"Accept" value:[dict objectForKey:@"Accept-Type"]];
 	if ([dict objectForKey:@"Content-Type"] == nil)
-		[request addValue:@"application/json" forHTTPHeaderField: @"Content-type"];
+		[request addRequestHeader:@"Content-Type" value:@"application/json"];
 	else 
-		[request addValue:[dict objectForKey:@"Content-Type"] forHTTPHeaderField: @"Content-type"];
+		[request addRequestHeader:@"Content-Type" value:[dict objectForKey:@"Content-Type"]];
 	
-	[request addValue:[[NSURL URLWithString:url] host] forHTTPHeaderField: @"Host"];
-	[request addValue:@"Ribbit_ObjectiveC" forHTTPHeaderField: @"User-Agent"];
-	
-	//	if(cookies) [request setAllHTTPHeaderFields:[NSHTTPCookie requestHeaderFieldsWithCookies:cookies]];
+	[request addRequestHeader:@"Host" value:[[NSURL URLWithString:url] host]];
+	[request addRequestHeader:@"User-Agent" value:@"Ribbit_Objective_C"];
+
 	if (jsonBody != nil) {
-	//	NSNumber *length = [NSNumber numberWithUnsignedInteger:[body length]];
-	//	NSString *postLength = [length stringValue];		
-	//	[request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-		[request setHTTPBody:[jsonBody dataUsingEncoding:NSUTF8StringEncoding]];
-	}
-	if (dataBody != nil) {
-		[request setHTTPBody:dataBody];
-	}
-//	urlRequest = request;
-//	[self start];
+		[request setPostBody:[jsonBody dataUsingEncoding:NSUTF8StringEncoding]];
+	}else if (dataBody != nil) {
+//		[request setHTTPBody:dataBody];
+	} 
 	
-	[self getDataWithRequest:request delegate:self
-					didFinishSelector:@selector(requestTokenTicket:didFinishWithData:)
-					  didFailSelector:@selector(requestTokenTicket:didFailWithError:)];
+	[request startSynchronous];
+	error = [request error];
+	NSLog(@"error = %@", error);
+	if (!error) {
+		if ([[request requestMethod] isEqualToString:@"POST"] || [[request requestMethod] isEqualToString:@"PUT"]) {
+			NSDictionary *headers = [request responseHeaders];
+			response = [headers objectForKey:@"Location"];
+		} else {
+			response = [request responseString];
+		}
+	}
 }
 
 
@@ -288,6 +298,14 @@
 	
 	NSURL *url = [NSURL URLWithString:fullUrl];
 	NSLog(@"full url = %@", url);
+	
+	//NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+//	[dict setObject:uri forKey:@"url"];
+//	[dict setObject:username forKey:@"username"];
+//	[dict setObject:pass forKey:@"password"];
+//	[dict setObject:@"POST" forKey:@"method"];
+//	
+//	[self httpRequestWithDictionary:dict];
 	OAConsumer *consumer = [[OAConsumer alloc] initWithKey:config.consumerKey secret:config.secretKey];
 	
 	// consider making this a helper function on RibbitConfig
@@ -312,10 +330,11 @@
 }
 
 - (void)requestTokenTicket:(OAServiceTicket *)ticket didFinishWithData:(NSData *)streamData {
-//	NSLog(@"data = %@", data);
+	NSLog(@"data = %@", data);
 //	NSLog(@"my Data: %.*s", [data length], [data bytes]);
+	[NSThread sleepForTimeInterval:10];
 	if (ticket.didSucceed) {
-		//NSLog(@"data = %@", data);
+		NSLog(@"ddata = %@", data);
 		NSString *responseBody = [[NSString alloc] initWithData:streamData encoding:NSUTF8StringEncoding];
 		//NSLog(@"responseBody = %@", responseBody);
 		OAToken *requestToken;
@@ -614,13 +633,10 @@
     responseData = [NSURLConnection  sendSynchronousRequest:urlRequest
                                          returningResponse:&urlResponse
                                                      error:&error];
-	[NSThread sleepForTimeInterval:10];
-//	NSURLConnection *conx = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
-//	[conx start];
+	NSLog(@"response = %@", [urlResponse URL]);
+	//NSURLConnection *queryConnection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
+	//[NSThread sleepForTimeInterval:10];
 	
-	
-//	NSLog(@"response data = %@", responseData);
-//	NSLog(@"my Data: %.*s", [responseData length], [responseData bytes]);
 	
     if (error != nil) {
         OAServiceTicket *ticket= [[OAServiceTicket alloc] initWithRequest:urlRequest
@@ -634,6 +650,7 @@
         OAServiceTicket *ticket = [[OAServiceTicket alloc] initWithRequest:urlRequest
                                                                   response:urlResponse
                                                                 didSucceed:[(NSHTTPURLResponse *)response statusCode] < 400];
+
         [delegate performSelector:didFinishSelector
                        withObject:ticket
                        withObject:responseData];
