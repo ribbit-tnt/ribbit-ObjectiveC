@@ -38,11 +38,13 @@
 		NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 		[dict setObject:username forKey:@"username"];
 		[dict setObject:password forKey:@"password"];
-		[dict setObject:@"login" forKey:@"url"];
+		NSString *url = [[config endpoint] stringByAppendingString:@"/login"];
+		[dict setObject:url forKey:@"url"];
+		[dict setObject:@"POST" forKey:@"method"];
 		
 	//	[request httpRequestWithDictionary:dict];
-		[request sendLoginRequestWithURI:@"login" username:@"test" pass:@"testtest"];
-	//	[request sendLoginRequestWithURI:@"login" username:@"test" password:@"testtest"];
+		[request sendLoginRequestWithURI:@"login" username:username	pass:password];
+
 		response = request.response;
 	} @catch( NSException *e) {
 		NSLog(@"caught NSException: %@", e);
@@ -85,7 +87,7 @@
 		NSArray *components = [[response componentsSeparatedByString:@"&"] autorelease];
 		NSString *requestToken = [[[[components objectAtIndex:0] componentsSeparatedByString:@"="] objectAtIndex:1] autorelease];
 		NSString *requestSecret = [[[[components objectAtIndex:1] componentsSeparatedByString:@"="] objectAtIndex:1] autorelease];
-		NSMutableString *callbackQueryParams = [[NSMutableString alloc] initWithString:@""];
+		NSMutableString *callbackQueryParams = [[NSMutableString alloc] initWithString:@" "];
 		
 		[config setRequestToken:requestToken];
 		[config setRequestSecret:requestSecret];
@@ -124,24 +126,27 @@
 
 -(Folder*) getFolder:(NSString*)name {
 	if (config.accountId == NULL) {
-		//TODO raise exception
+		//[NSException raise:@"There is no logged in user" format:@"", name];
+
 	}
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
 	NSMutableString *url = [[NSMutableString alloc] initWithString:@"media/"];
 	[url appendString:[config domain]];
 	[url appendString:@"/"];
 	[url appendString:name];
-	[request httpGetWithURI:url];
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+	[dict setObject:url forKey:@"url"];
+	[dict setObject:@"GET" forKey:@"method"];
+	[dict setObject:[SignedRequest getAcceptTypeWithURI:url] forKey:@"Accept-Type"];
+	
+	[request httpRequestWithDictionary:dict];
+
+	[dict release];
 	[url release];
 	
-	// TODO replace this with a notifier or selector...is very bad
-	//[NSThread sleepForTimeInterval:10];
 	NSString *result = request.response;
 	[request release];
-	NSLog(@" get Folder result = %@", result);
-	//SBJSON *parser = [[SBJSON alloc] init];
-	
-	//id tempDict = [result JSONValue];
+
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
 	
 	NSArray *dictArray = [tempDict objectForKey:@"entry"];
@@ -155,7 +160,7 @@
 		return folder;
 	} else {
 		NSLog(@"There was an error processing the folder");
-		// TODO figure out how to throw error.
+		[NSException raise:@"There was an error processing the folder" format:@"Error processing folder %@", name];
 	}
 	return nil;
 }
@@ -193,7 +198,16 @@
 	[url appendString:[config getActiveUserId]];
 	[url appendString:@"/"];
 	[url appendString:deviceId];
-	[request httpGetWithURI:url];
+	
+	NSMutableDictionary *d = [[NSMutableDictionary alloc] init];
+	[d setObject:url forKey:@"url"];
+	[d setObject:@"GET" forKey:@"method"];
+	[d setObject:[SignedRequest getAcceptTypeWithURI:url] forKey:@"Accept-Type"];
+	
+	[request httpRequestWithDictionary:d];
+	[d release];
+	
+	
 	NSString *result = request.response;
 	
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
@@ -222,14 +236,17 @@
 	jsonerror = nil;
 	json = [SBJSON new];
 	
+	NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+	[dictionary addEntriesFromDictionary:dict];
+	[dictionary setObject:url forKey:@"url"];
 	NSString *body = [json stringWithObject:dict error:&jsonerror];
-	[dict setObject:url forKey:@"url"];
-	[dict setObject:@"POST" forKey:@"method"];
-	[dict setObject:body forKey:@"json"];
+	
+	[dictionary setObject:@"POST" forKey:@"method"];
+	[dictionary setObject:body forKey:@"json"];
 	
 	SignedRequest *signedRequest = [[SignedRequest alloc] initWithConfig:config];
-	[signedRequest httpRequestWithDictionary:dict];
-	
+
+	[signedRequest httpRequestWithDictionary:dictionary];
 	return [self getDevice:[dict objectForKey:@"id"]];
 }
 
@@ -269,14 +286,9 @@
 	[d setObject:@"GET" forKey:@"method"];
 	[d setObject:[SignedRequest getAcceptTypeWithURI:url] forKey:@"Accept-Type"];
 	
-	//[request httpRequestWithDictionary:d];
-	[request httpGetWithURI:url];
-
+	[request httpRequestWithDictionary:d];
+	
 	NSString *result = request.response;
-	
-	//SBJSON *parser = [[SBJSON alloc] init];
-	
-	//id tempDict = [result JSONValue];
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
 	
 	NSDictionary *dict = [tempDict objectForKey:@"entry"];
@@ -300,7 +312,13 @@
 	NSMutableString *url = [[NSMutableString alloc] initWithString:@"calls/"];
 	[url appendString:[config getActiveUserId]];	
 	[url appendString:callId];
-	[request httpGetWithURI:url];
+	NSMutableDictionary *d = [[NSMutableDictionary alloc] init];
+	[d setObject:url forKey:@"url"];
+	[d setObject:@"GET" forKey:@"method"];
+	[d setObject:[SignedRequest getAcceptTypeWithURI:url] forKey:@"Accept-Type"];
+	
+	[request httpRequestWithDictionary:d];
+	
 	NSString *result = request.response;
 	
 	
@@ -317,7 +335,7 @@
 	return nil;
 }
 
--(NSArray*)getCalls:(NSDictionary*)dict {
+-(NSArray*)getCalls:(NSMutableDictionary*)dict {
 	if (config.accountId == NULL) {
 		// raise exception here, TODO figure out exact format
 	}
@@ -326,7 +344,17 @@
 	[uri appendString:[@"calls/" stringByAppendingString:[config getActiveUserId]]];
 	[uri appendString:[Resource convertMapToQueryString:dict]];
 
-	[request httpGetWithURI:uri];
+	[dict release];
+	dict = [[NSMutableDictionary alloc] init];
+	[dict setObject:uri forKey:@"url"];
+	[dict setObject:@"GET" forKey:@"method"];
+	[dict setObject:[SignedRequest getAcceptTypeWithURI:uri] forKey:@"Accept-Type"];
+	
+	[request httpRequestWithDictionary:dict];
+
+	//[request httpRequestWithDictionary:dict];
+	
+	//[request httpGetWithURI:uri];
 	NSString* result = request.response;
 	
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
@@ -343,7 +371,7 @@
 		}
 		return calls;
 	} else {
-		NSLog(@"There was an error processing the devices");
+		NSLog(@"There was an error processing the calls");
 		// TODO figure out how to throw error.
 	}
 	return nil;
@@ -361,7 +389,13 @@
 	[uri appendString:@"/"];
 	[uri appendString:[dict objectForKey:@"id"]];
 	
-	[request httpGetWithURI:uri];
+	NSMutableDictionary *d = [[NSMutableDictionary alloc] init];
+	[d setObject:uri forKey:@"url"];
+	[d setObject:@"GET" forKey:@"method"];
+	[d setObject:[SignedRequest getAcceptTypeWithURI:uri] forKey:@"Accept-Type"];
+	
+//	[request httpGetWithURI:uri];
+	[request httpRequestWithDictionary:d];
 	NSString* result = request.response;
 	 
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
@@ -377,7 +411,14 @@
 	}
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
 	NSString *uri = [@"devices/" stringByAppendingString:[config getActiveUserId]];
-	[request httpGetWithURI:uri];
+	
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+	[dict setObject:uri forKey:@"url"];
+	[dict setObject:@"GET" forKey:@"method"];
+	[dict setObject:[SignedRequest getAcceptTypeWithURI:uri] forKey:@"Accept-Type"];
+	//[request httpGetWithURI:uri];
+	[request httpRequestWithDictionary:dict];
+
 	NSString* result = request.response;
 	
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
@@ -401,13 +442,20 @@
 }
 
 -(NSArray*)getServices {
-	if (config.accountId == NULL) {
+	if (config.accountId == nil) {
 		// raise exception here, TODO figure out exact format
 	}
+	NSLog(@"accountId = %@", config.accountId);
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
 	NSMutableString *url = [[NSMutableString alloc] initWithString:@"services/"];
 	[url appendString:[config getActiveUserId]];
-	[request httpGetWithURI:url];
+	
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+	[dict setObject:url forKey:@"url"];
+	[dict setObject:@"GET" forKey:@"method"];
+	[dict setObject:[SignedRequest getAcceptTypeWithURI:url] forKey:@"Accept-Type"];
+	
+	[request httpRequestWithDictionary:dict];
 	NSString* result = request.response;
 	
 	//SBJSON *parser = [[SBJSON alloc] init];
@@ -451,7 +499,14 @@
 	[uri appendString:folderName];
 	[uri appendString:[Resource convertMapToQueryString:dict]];
 	
-	[request httpGetWithURI:uri];
+	NSMutableDictionary *d = [[NSMutableDictionary alloc] init];
+	[d setObject:uri forKey:@"url"];
+	[d setObject:@"GET" forKey:@"method"];
+	[d setObject:[SignedRequest getAcceptTypeWithURI:uri] forKey:@"Accept-Type"];
+	//[request httpGetWithURI:uri];
+	
+	[request httpRequestWithDictionary:d];
+	
 	NSString* result = request.response;
 	
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
@@ -518,22 +573,17 @@
 	}
 	SignedRequest *request = [[SignedRequest alloc] initWithConfig:config];
 	NSMutableString *url = [[NSMutableString alloc] initWithString:@"users/"];
-	[request httpGetWithURI:url];
 	
-	//NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-	//[dict setObject:url forKey:@"url"];
-	//[dict setObject:@"GET" forKey:@"method"];
-	//[dict setObject:[SignedRequest getAcceptTypeWithURI:url] forKey:@"Accept-Type"];
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+	[dict setObject:url forKey:@"url"];
+	[dict setObject:@"GET" forKey:@"method"];
+	[dict setObject:[SignedRequest getAcceptTypeWithURI:url] forKey:@"Accept-Type"];
 	
-	//[request httpRequestWithDictionary:dict];
+	[request httpRequestWithDictionary:dict];
 	NSString* result = request.response;
-	
-	//SBJSON *parser = [[SBJSON alloc] init];
-	
-	//id tempDict = [result JSONValue];
+
 	NSDictionary *tempDict = [parser objectWithString:result error:nil];
 	
-	//id tempDict = [result JSONValue];
 	NSArray *dictArray = [tempDict objectForKey:@"entry"];
 	[dictArray retain];
 

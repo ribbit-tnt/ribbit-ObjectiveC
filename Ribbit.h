@@ -103,7 +103,7 @@
  @param dict the dictionary describing the calls to retrieve
  @returns an array of calls
  */
--(NSArray*) getCalls:(NSDictionary*)dict;
+-(NSArray*) getCalls:(NSMutableDictionary*)dict;
 
 /**
  Gets an array of existing devices
