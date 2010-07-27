@@ -47,5 +47,15 @@
  Removes this folder object.
  */
 -(void) removeFolder;
-
+/**
+ Uploads a file to the folder
+ @param filename the name of the file to upload
+ @param data the data content of the file
+ */
+-(void) uploadFile:(NSString*)fileName withData:(NSData*)data;
+/**
+ Downloads a file to the folder
+ @param filename the name of the file to download
+ */
+-(void) downloadFile: (NSString*)filename;
 @end

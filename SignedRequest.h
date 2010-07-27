@@ -46,11 +46,10 @@
 -(id)init;
 -(id)initWithConfig:(RibbitConfig*)ribbitConfig;
 -(id)initWithRealm:(NSString*)realmString andConfig:(RibbitConfig*)ribbitConfig;
-//Refactor of requests
+//ASIHttpRequests
 -(void)httpRequestWithDictionary:(NSDictionary*)dict;
 
-
-
+//
 -(void)httpGetWithURI:(NSString*)uri;
 -(void)httpDeleteWithURI:(NSString*)uri;
 	

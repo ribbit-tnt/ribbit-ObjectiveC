@@ -38,8 +38,7 @@
 		NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 		[dict setObject:username forKey:@"username"];
 		[dict setObject:password forKey:@"password"];
-		NSString *url = [[config endpoint] stringByAppendingString:@"/login"];
-		[dict setObject:url forKey:@"url"];
+		[dict setObject:@"login" forKey:@"url"];
 		[dict setObject:@"POST" forKey:@"method"];
 		
 	//	[request httpRequestWithDictionary:dict];
@@ -80,9 +79,10 @@
 		[dict setObject:@"request_token" forKey:@"url"];
 		[dict setObject:@"POST" forKey:@"method"];
 		[dict setObject:@"application/json" forKey:@"Content-Type"];
-		[request httpRequestWithDictionary:dict];
+		//[request httpRequestWithDictionary:dict];
 		
 		//[request httpPostWithURI:@"request_token"];
+		[request sendRequestWithURI:@"request_token" method:@"POST" vars:nil username:nil pass:nil outStream:nil acceptType:nil contentType:nil inStream:nil];
 		response = request.response;
 		NSArray *components = [[response componentsSeparatedByString:@"&"] autorelease];
 		NSString *requestToken = [[[[components objectAtIndex:0] componentsSeparatedByString:@"="] objectAtIndex:1] autorelease];
@@ -416,7 +416,7 @@
 	[dict setObject:uri forKey:@"url"];
 	[dict setObject:@"GET" forKey:@"method"];
 	[dict setObject:[SignedRequest getAcceptTypeWithURI:uri] forKey:@"Accept-Type"];
-	//[request httpGetWithURI:uri];
+
 	[request httpRequestWithDictionary:dict];
 
 	NSString* result = request.response;

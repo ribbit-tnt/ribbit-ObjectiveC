@@ -359,7 +359,7 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 					 [self HTTPMethod],
 					 [[[self URL] URLStringWithoutQuery] URLEncodedString],
 					 [normalizedRequestParameters URLEncodedString]];
-	
+
 	return ret;
 }
 

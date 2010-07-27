@@ -139,17 +139,16 @@
 	[signedRequest httpRequestWithDictionary:dict];
 	// Figure out why it doesn't wait for the response
 	
-	//NSArray *chunks = [response componentsSeparatedByString: @"/"];
-	//callID = [chunks objectAtIndex:[chunks count] - 1 ];
-	//callURI = response;
+	NSArray *chunks = [response componentsSeparatedByString: @"/"];
+	callID = [chunks objectAtIndex:[chunks count] - 1 ];
+	callURI = response;
 }
 
 -(void)updateCallWithDictionary:(NSMutableDictionary *)dictionary {
 	if (config.accountId == NULL) {
 		// raise exception here, TODO figure out exact format
 	}
-	//[signedRequest httpPostWithURI:uri vars:dict];
-	//NSLog(@"user id = %@", userId);
+
 	NSMutableString *url = [[NSMutableString alloc]init];
 	[url appendString:[config.endpoint stringByAppendingString:@"calls/"] stringByAppendingString: config.accountId];
 	[url appendString:@"/"];

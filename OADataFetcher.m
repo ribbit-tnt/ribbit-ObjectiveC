@@ -40,9 +40,6 @@
     didFinishSelector = finishSelector;
     didFailSelector = failSelector;
 
-        NSLog(@"OADataFetcher before prepare");
-	
-    NSLog(@"OADataFetcher before response data");
 
     responseData = [NSURLConnection sendSynchronousRequest:request
                                          returningResponse:&response
@@ -52,8 +49,6 @@
         OAServiceTicket *ticket= [[OAServiceTicket alloc] initWithRequest:request
                                                                  response:response
                                                                didSucceed:NO];
-		NSLog(@"%@", ticket.request);
-	//	NSLog(@"response!! = %@", response);
 
         [delegate performSelector:didFailSelector
                        withObject:ticket
@@ -78,14 +73,11 @@
     delegate = aDelegate;
     didFinishSelector = finishSelector;
     didFailSelector = failSelector;
-    
-//    [request prepare];
+
     
     responseData = [NSURLConnection sendSynchronousRequest:request
                                          returningResponse:&response
                                                      error:&error];
-	NSLog(@"response data = %@", responseData);
-	NSLog(@"my Data: %.*s", [responseData length], [responseData bytes]);
 
     if (response == nil || responseData == nil || error != nil) {
         OAServiceTicket *ticket= [[OAServiceTicket alloc] initWithRequest:request

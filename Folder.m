@@ -5,9 +5,10 @@
 //  Created by Ribbit Corporation on 5/12/10.
 //  Copyright 2010 Ribbit Corporation. All rights reserved.
 //
-
+#import "SBJSON.h"
 #import "Folder.h"
 #import "SignedRequest.h"
+#import "ASIHTTPRequest.h"
 
 
 @implementation Folder
@@ -37,10 +38,13 @@
 		[url appendString:filename];
 	}
 	
-	[request httpGetWithURI:url];
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+	[dict setObject:url forKey:@"url"];
+	[dict setObject:@"GET" forKey:@"method"];
+	[request httpRequestWithDictionary:dict];
+	//[request httpGetWithURI:url];
 	[url release];
-	//TODO replace this, very very bad
-	[NSThread sleepForTimeInterval:15];
+	
 	return request.response;
 }
 
@@ -99,6 +103,53 @@
 
 	//[files addObjectsFromArray:tempArray];
 	//[values release];	
+}
+
+-(void) uploadFile:(NSString*)fileName withData:(NSData*)data {
+	NSMutableString *url = [[NSMutableString alloc] init];
+	[url appendString:[[config.endpoint stringByAppendingString:@"media/"] stringByAppendingString: config.domain]];
+	[url appendString:@"/"];
+	[url appendString:folderName];
+	[url appendString:@"/"];
+	[url appendString:fileName];
+	
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+	[dict setObject:url forKey:@"url"];
+	[dict setObject:data forKey:@"data"];
+	[dict setObject:@"POST" forKey:@"method"];
+	NSString *accept = [SignedRequest getAcceptTypeWithURI:url];
+	[dict setObject:accept forKey:@"Content-Type"];
+	
+	
+	SignedRequest *signedRequest = [[SignedRequest alloc] initWithConfig:config];
+	[signedRequest httpRequestWithDictionary:dict];
+	NSLog(@"response = %@", signedRequest.response);
+}
+
+-(void) downloadFile: (NSString*)filename andPath:(NSString*)path{
+	NSMutableString *url = [[NSMutableString alloc] init];
+	[url appendString:[[config.endpoint stringByAppendingString:@"media/"] stringByAppendingString: config.domain]];
+	[url appendString:@"/"];
+	[url appendString:folderName];
+	[url appendString:@"/"];
+	[url appendString:filename];
+	
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+	[dict setObject:url forKey:@"url"];
+	[dict setObject:@"GET" forKey:@"method"];
+	NSString *accept = [SignedRequest getAcceptTypeWithURI:url];
+	[dict setObject:@"audio/wav" forKey:@"Accept-Type"];
+	[dict setObject:path forKey:@"saveFilePath"];
+	
+	SignedRequest *signedRequest = [[SignedRequest alloc] initWithConfig:config];
+	[signedRequest httpRequestWithDictionary:dict];
+	
+	ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:signedRequest.response];
+	NSLog(@"returned");
+	[request setDownloadDestinationPath:[dict objectForKey:@"saveFilePath"]];
+	
+	//[signedRequest httpGetWithURI:url];
+	NSLog(@"response = %@", signedRequest.response);
 }
 
 @end
